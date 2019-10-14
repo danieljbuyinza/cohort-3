@@ -1,1 +1,1 @@
-# Creators of the Tax Master System.
+# Creators of the Events Planner Application.
