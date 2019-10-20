@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> ACADEMIA </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome/css/all.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-white" href="#"> ACADEMIA </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Back Home </a> <!-- <span class="sr-only">(current)</span> ->
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"> Log Lost Item </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Log Found Item </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <a href="#" class="btn btn-outline-success my-2 my-sm-0"> Point Of Access </a>
+            </div>
+        </div> -->
+    </nav>
+    
+    
+    <br /> <br />
+    <div class="container content">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 left_column">
+                <div class="title text-center">
+                    CALCULATE <i class="fa fa-cal"></i> STUDENT'S FINAL MARK
+                </div>
+
+            <div class="info-block">
+                Fill in the student's Test 1 , Test 2 , Coursework and Final exam marks <br> And then click on the <strong><em> Compute </em></strong> button to calculate Student's final mark
+            </div>
+            </div>
+            
+            <div class="col-lg-5 col-sm-12 right_column"> 
+                    <div class="search_form">
+
+            <form class="form" action="" method="">
+               <!--  <div class="row">
+                    <div class="col-md-4 col-12 form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="help-block" style="font-size:90%;">
+                                    Have you reported the item lost ?
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input reported_case" type="radio" name="reported_case" id="reported_case_yes" value="case_number">
+                                    <label class="custom-control-label" for="reported_case_yes"> Yes </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input reported_case" name="reported_case" type="radio" id="reported_case_no" value="no">
+                                    <label class="custom-control-label" for="reported_case_no"> No </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <div class="form-group">
+                            <label class="" for="test1"> TEST 1 MARK:</label>
+                            <input type="number" class="form-control" name="test1" placeholder="Test 1" />
+
+                            <div class="help-block">
+                                Student's Test One Score
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-6">
+                         <div class="form-group">
+                            <label class="" for="test2"> TEST 2 MARK:</label>
+                            <input type="number" class="form-control" name="test2" placeholder="Test 2" />
+
+                            <div class="help-block">
+                                Student's Test Two Score
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-6">
+                       <div class="form-group">
+                            <label class="" for="coursework_mark"> COURSEWORK MARK:</label>
+                            <input type="number" class="form-control" name="coursework_mark" placeholder="Coursework" />
+
+                            <div class="help-block">
+                                Student's Coursework Score
+                            </div>
+                        </div>
+
+                    </div>
+                     <div class="col-md-6 col-sm-6 col-6">
+                       <div class="form-group">
+                            <label class="" for="exam_mark"> EXAM MARK:</label>
+                            <input type="number" class="form-control" name="exam_mark" placeholder="Exam Mark" />
+
+                            <div class="help-block">
+                                Student's Exam Mark
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+                <div class = "row">
+                     <div class="col-md-12 col-sm-12 col-4">
+                        <!-- <input type="submit" class="btn btn-md btn-primary search_button" value="SEARCH" name="search_button"/> -->
+                        <button href="#" class="btn btn-md btn-primary float-right" title="COMPUTE FINAL MARK">
+                            Compute
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src='js/jquery-3.3.1.slim.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+
+    <script>
+        $(document).ready(function () {        
+            
+        });
+    </script>
+</body>
+
+</html>

@@ -1,9 +1,9 @@
-//function to receive two marks and choose a higher marl
+//function to receive two marks and choose a higher mark
 
 function marks(mark1,mark2){
   var mark1, mark2, highermark
-highermark = (mark1 >= mark2)?mark1:mark2 //arrow function compares two test marks and returns the higher marks
-
+highermark = (mark1 >= mark2)?mark1:mark2 //if statement compares two test marks and returns the higher marks
+// if mark1 is greater or equal to mark2, assign it to higher mark else assign mark 2
 
 return highermark
 }
