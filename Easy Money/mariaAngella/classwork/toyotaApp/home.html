@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="./css/style.css"> -->
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="container" >
+            <h1>Order List</h1>
+            <form action="#">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>Customer Information</legend>
+                            <div class="form-group row">
+                                <label class="control-label col-sm-3" for="">
+                                    Customer Id
+                                </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" placeholder="123-45-6789">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label class="control-label col-sm-3" for="">
+                                    Name
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" placeholder="Tom Thumb">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-sm-3" for="">
+                                    Town
+                                </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" placeholder="CA">
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="">
+                                        <input type="checkbox" name="retail" id="">
+                                        Retail Customer
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>Shipping</legend>
+                            <div class="form-group row"></div>
+                            <div class="control-label form-group row">
+                                <label for="" class="control-label col-sm-6">
+                                    <input type="radio" name="shipping" id="">
+                                    UPS
+                                </label>
+                                <label for="" class=" col-sm-6">
+                                    <input type="radio" name="shipping" id="">
+                                    Fed Ex Ground
+                                </label>
+                            </div>
+                            <div class="form-group row"></div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-6">
+                                    <input type="radio" name="shipping" id="">
+                                    US Postal Air
+                                </label>
+                                <label for="" class="col-sm-6">
+                                     <input type="radio" name="shipping" id="">
+                                     Fed Ex Air
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-6">
+                        <fieldset>
+                            <legend>PartOrdered</legend>
+                            <div class="form-group row">
+                                <label class="control-label col-sm-3" for="">
+                                    Part Number
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" placeholder="10152">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label class="control-label col-sm-3" for="">
+                                    Description
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" placeholder="Oil Filter">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label class="control-label col-sm-3" for="">
+                                    Price Per Part
+                                </label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" placeholder="$7.51">
+                                </div>
+                                <label class="control-label col-sm-2" for="">
+                                    Quatity
+                                </label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" placeholder="2">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <p class="control-label col-sm-3"></p>
+                                <label for="" class="col-sm-9">
+                                    <input type="checkbox" name="retail" id="">
+                                    Oversize Container
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-sm-6">
+                        <fieldset >
+                            <legend>Output</legend>
+                            <div class="form-group row">
+                                <label class="control-label col-sm-6" for="">
+                                    Cost
+                                </label>
+                                <div class="col-sm-6 form-control" type="text">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="control-label col-sm-6" for="">
+                                    Sales Tax
+                                </label>
+                                <div class="col-sm-6 form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="control-label col-sm-6" for="">
+                                    Shipping & Handling
+                                </label>
+                                <div class="col-sm-6 form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-sm-6" for="">Total</label>
+                                    <div class="col-sm-6 form-control" type="text">
+                                    </div>
+                                </div>
+
+                                
+                            </fieldset>
+                        </div>
+                    </div>
+                        <div class="form-group row">
+                            <div class="control-label col-sm-2">
+                                <input type="submit" class="btn btn-success btn-md" value="Compute">
+                            </div>
+                                    
+                                    <div class="control-label col-sm-9">
+                                        <input type="submit" class="btn btn-primary btn-md" value="New Order">
+                                    </div>
+
+                                    <div class="control-label col-sm-1">
+                                        <input type="submit" class="btn btn-danger btn-md" value="Exit">
+                                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="./js/bootstrap.min.js"></script>
+
+
+
+    </body>
+</html>

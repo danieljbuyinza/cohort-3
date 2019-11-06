@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+}
+
+header{
+  width: 100%;
+  height: 82px;
+  background-color:#3b5998;
+  border-bottom: 1px solid #133783;
+}
+
+h2{
+  text-align: center;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.header-logo {
+    float: left;
+    font-size: 45px;
+    padding-top: 15px;
+    font-weight: bolder;
+    font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+    color: #fff;
+  }
+
+  .section-right{
+    padding: 50px 0 24px;
+    
+  }
+
+  .section-left{
+    padding: 50px 0 24px;
+   
+  }
+
+  .form-input {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+    background: #3b5998; /* fallback for old browsers */
+  
+  }
+
+  .form-output{
+    border-radius: 5px;
+    background-color:#3b5998;
+    display: block;
+    padding: 20px;
+    height: 50%;
+    width: 100%;
+  }
+
+  .compute{
+    align-content: center;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 8px 8px 8px;
+    border-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+    border: 4px solid #fff
+  }
+
+  .compute:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+  .btn{
+    text-align: center;
+  }
+
+  .label{
+    font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+    border-color:#fff ;
+  }

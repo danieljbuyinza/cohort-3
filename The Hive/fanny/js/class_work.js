@@ -14,7 +14,7 @@ if (x<=5){
 console.log("exact");
 }
 
-//heks two senarioos
+//checks two scenario's
 /*var x=10;
 if (x<5){
 

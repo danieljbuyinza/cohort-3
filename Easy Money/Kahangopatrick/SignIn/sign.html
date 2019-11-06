@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/custom.css">
+
+    <title>Sign In</title>
+    <script src="js/custom.js"></script>
+</head>
+
+<body>
+    <img src="img/Toyota-Logo-PNG-Clipart.png" alt="" style="width:170px;">
+    <!-- Form elements with the ids set for javascript to refer them -->
+    <div class="Content">
+        <h2>LOGIN</h2>
+        <form id="form" action="#">
+                <div id="bash">
+                    <label for="">Username</label><br>
+                    <input class="txt" type="text" id="usName">
+                </div>
+                <div id="bash">
+                    <label for="">Password</label><br>
+                    <input class="txt" type="password" id="password">
+                </div>
+            
+            
+            <!-- The buttons set to trigger the verrify function once clicked -->
+                <br><br>
+                <div id="bash2">
+                    <span><button type="submit" onclick="verify()" class="btn btn-primary">Login</button></span>
+                    <span><button type="reset" class="btn btn-outline-warning">Clear</button></span>
+                </div>
+            </form>
+       <p id='caller' style="color: beige;"></p>
+    </div>
+
+    
+<!-- Styling all the input boxes with the same color using the querySelectorAll function -->
+    <script>
+        const demoQeryAll = document .querySelectorAll('.txt')
+        demoQeryAll.forEach(
+query=>  {
+query.style.border = '2px solid green'
+});
+
+    //function that triggers a time stamp once the clear button is pressed
+function callerReset(event){
+    log.textContent = `Form reset! time Stamp: ${event.timeStamp}`
+}
+//accessing dom elements and we set a listener to form tag
+const form = document.getElementById('form');
+const log = document.getElementById('caller');
+form.addEventListener ('reset', callerReset);
+ 
+//function that triggers the selector to output an alert of the selected input on the screen
+function logselect(event){
+   const select = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd
+    )
+//  higlighted text in the input boxes outputed in an alert box
+    alert(`You selected: ${select}`) 
+   }
+   
+   const input = document.querySelector('input');
+   input.addEventListener('select',logselect)
+    </script>
+
+
+</body>
+
+</html>

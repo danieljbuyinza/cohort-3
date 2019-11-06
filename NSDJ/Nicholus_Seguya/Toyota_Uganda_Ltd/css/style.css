@@ -1,0 +1,116 @@
+#app-body{
+  padding-top: 35px;
+}
+
+.main-div {
+  background-color: #c0d2fa;
+  border-radius: 1px;
+  display: inline-block;
+  padding: 2em;
+  width: 100%;
+  height: 750px;
+  margin-top: 10px;
+}
+
+
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header {
+  width: 100%;
+  height: 82px;
+  background: rgba(51, 51, 51, 0.8);
+}
+
+footer{
+  display: block;
+
+}
+
+p{
+  padding-top: 15px;
+  color:#fff;
+  text-align: center;
+}
+
+.logo-header{
+  font-size: 65px;
+  padding-top: 15px;
+  font-weight: bolder;
+  font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+  color: #fff;
+  text-align: center;
+}
+
+fieldset {
+  /* display: block; */
+  padding-top: 0.35em; 
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px solid #fff;
+  height:290px ;
+  width: 500px;
+}
+
+.div-field{
+  background-color: rgb(237, 150, 100);
+ 
+}
+
+
+input[type="text"]{
+  display: inline-block;
+  text-align: left;
+  border: 1px solid lightgrey;
+  border-radius:3px ;
+  padding: 4px 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff;
+  font-size: 18px;
+  height: 45px;
+}
+
+.output{
+  text-align: left;
+  border: 1px solid none;
+  border-radius:3px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: none;
+  font-size: 18px;
+  height: 50px;
+  background-color: lightgrey;
+}
+
+input[type="submit"],[type="reset"]{
+  width: 25%;
+  background-color: #f7a102;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+  display: inline-block;
+  text-decoration: none;
+}
+
+input[type="radio"],[type="checkbox"]{
+  -ms-transform:scale(1.5);/* Internet Explorer 9*/
+  -webkit-transform:scale(1.5);/* Chorme ,Safari ,Opera */
+  transform: scale(1.5);
+}
+
+
+
+label{
+  font-weight: bolder;
+  /* color: #fff; */
+}

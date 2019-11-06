@@ -30,6 +30,30 @@ angel=new patient("Angel Kebirungi", 46, "Married", "Isingiro","HIV", "not sever
 console.log(otim.diagnosis)
 
 
+<<<<<<< HEAD
+//This function for an object fruit and its instances.
+function fruit(color,size,weight,taste,cost,shape){ 
+
+    
+    this.name=name
+    this.age=age
+    this.maritalStatus=maritalStatus
+    this.residence=residence
+    this.diagnosis=diagnosis
+    this.condition=condition
+}
+
+orange=new fruit("orange", "small", 30, "bitter", 1000, "round")
+mango=new fruit("brown", "medium", 65, "sweet",500,"oval")
+apple=new fruit("yellow", "medium", 77, "sweet",2000, "round")
+ovacado=new fruit("green", "big", , 95, "tasty", 1500, "oval")
+Berry=new fruit("purple", "small", 28, "sour",5000, "circular")
+passionFruits=new fruit("black", "small",54 "bitter", 3000,"circular")
+
+
+//function for an object girl and its instances.
+function girl(size,height,voice,hair,birthmonth,birthYear){ 
+=======
 //color, size etc are properties of an object fruit
 function fruit(color,size,weight,taste,cost,shape){ 
 
@@ -57,6 +81,7 @@ console.log(apple.color)
 function girl(size,height,voice,hair,birthmonth,birthYear){ 
 
     //the properties are named using 'this'
+>>>>>>> 9923d8543a7d21169c2eadc0a1a13ac19505854c
     this.size=size
     this.height=height
     this.voice=voice
@@ -65,6 +90,20 @@ function girl(size,height,voice,hair,birthmonth,birthYear){
     this.birthYear=birthYear
    
 }
+<<<<<<< HEAD
+
+sandra=new girl("big","short","deep","curly","january",1994)
+sylvia=new girl("small","tall","deep","natural","july",1996)
+susan=new girl("small","tall","soft","short","august",1998)
+aisha=new girl("medium","medium","soft","draids","december",2000)
+esether=new girl("big","tall","deep","draids","july",1992)
+birthYear=new girl("medium","medium","soft","natural","april",2001)
+
+
+
+//function for an object boy and its instances.
+function boy(occupation,residence,voice,height,birthmonth,birthYear){ 
+=======
 //sandra, sylivia etc are instances of an object girl and sre defined using 'new'
 sandra=new girl("big","short","deep","curly","January",1994)
 sylvia=new girl("small","tall","deep","natural","July",1996)
@@ -81,6 +120,7 @@ console.log(sandra.birthYear)
 function boy(occupation,residence,voice,height,birthmonth,birthYear){ 
 
     //the properties are named using 'this'
+>>>>>>> 9923d8543a7d21169c2eadc0a1a13ac19505854c
     this.occupation=occupation
     this.residence=residence
     this.voice=voice
@@ -88,6 +128,19 @@ function boy(occupation,residence,voice,height,birthmonth,birthYear){
     this.birthmonth=birthmonth
     this.birthYear=birthYear
 }
+<<<<<<< HEAD
+
+daniel=new boy("carpenter","bwaise","deep", "medium", "july", 2000)
+john=new boy("engineer","kito","soft","short","july",1996)
+patrick=new boy("doctor","muyenga","soft","tall","december",2000)
+nicholas=new boy("developer","ggaba","deep","short","april",2001)
+emma=new boy("nurse","nsambya","soft","short","january",1994)
+james=new boy("accountant","kira", "soft","tall","august",1998)
+
+
+//function for an object country and its instances
+function country(population,currency,colonialMaster,independenceYear,president, continent){ 
+=======
 //daniel,john etc are instances of an object boy and sre defined using 'new'
 daniel=new boy("Carpenter","Bwaise","deep", "medium", "July", 2000)
 john=new boy("Engineer","Kito","soft","short","July",1996)
@@ -101,11 +154,27 @@ console.log(john.voice)
 //population, currency etc are properties of an object country
 function country(population,currency,colonialMaster,independenceYear,president, continent){ 
     //these properties are named using 'this'
+>>>>>>> 9923d8543a7d21169c2eadc0a1a13ac19505854c
     this.population=population
     this.currency=currency
     this.colonialMaster=colonialMaster
     this.independenceYear=independenceYear
     this.president=president
+<<<<<<< HEAD
+    this.africa=africa
+}
+    
+uganda=new country(40,"ugx","britain",1962,"museven","africa")
+kenya=new country(50,"ksh","britain",1960,"kenyatta","africa")
+rwanda=new country(20,"franks","france",1994,"kagame","africa")
+burundi=new country(25,"dollar","portugal",1980,"jerome","africa")
+tanzania=new country(60, "tsh","germany",1960,"magufuli","africa")
+sudan=new fcountry(45,"dollar","sudan",2007,"kir","africa")
+
+
+//function for an object pupil and its instances.
+function pupil(classLevel, age,gender,residence,father,mother){ 
+=======
     this.continent=continent
 }
  //uganda, kenya etc are instances of an object country.   
@@ -122,6 +191,7 @@ console.log(kenya.currency)
 function pupil(classLevel, age,gender,residence,father,mother){ 
     
     //the properties are named using 'this'
+>>>>>>> 9923d8543a7d21169c2eadc0a1a13ac19505854c
     this.classLevel=classLevel
     this.age=age
     this.gender=gender
@@ -129,6 +199,17 @@ function pupil(classLevel, age,gender,residence,father,mother){
     this.father=father
     this.mother=mother
 }
+<<<<<<< HEAD
+
+tiana=new pupil("p.2",6,"female","kahiihi","dan","MimeTypeArray")
+elisha=new pupil("p.4",8,"male","nsiika","herbert","josephine")
+daphine=new pupil("p.1",4,"male","rubindi","robert","atim")
+miriam=new pupil("p.2",6,"female","kikoni","jerome","aisha")
+annet=new pupil("p.3",5,"female","bwaise","nicholas","jovita")
+gilbert=new pupil("p.1",3,"male","kito","henry","racheal")
+
+
+=======
 //tiana, elisha etc are instances of an object pupil.
 tiana=new pupil("P.2",6,"female","Kahiihi","Dan","Mary")
 elisha=new pupil("P.4",8,"male","Nsiika","Herbert","Josephine")
@@ -141,3 +222,4 @@ console.log(annet.age)
 
 /* Note that in D.O.M -  Document Oriented Model of programmining,
 a function is regarded as a first class object, */
+>>>>>>> 9923d8543a7d21169c2eadc0a1a13ac19505854c

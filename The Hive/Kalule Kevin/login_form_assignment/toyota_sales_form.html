@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> TOYOTA SALES</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome/css/all.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
+
+
+</head>
+
+<body>
+
+    <header class="toyota-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-toyota">
+            <a class="navbar-brand" href="toyota_login_form.html" style="width:35%">
+                <img src="images/toyota_emblem.jpg" alt="Toyota Logo" title="TOYOTA LOGO" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Back Home </a> <!-- <span class="sr-only">(current)</span> ->
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"> Log Lost Item </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Log Found Item </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <a href="#" class="btn btn-outline-success my-2 my-sm-0"> Point Of Access </a>
+            </div>
+        </div> -->
+            <div class="welcome_title"> TOYOTA CUSTOMER SALES </div>
+        </nav>
+
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 col-9 main_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <div class="sales_form_section">
+                                <!-- form start -->
+                                <form class="form">
+                                    <div class="row">
+                                        <div class="col-md-6 col-6 sales_form_left_column">
+                                            <fieldset>
+                                                <legend>Customer Information</legend>
+
+                                                <div class="form-group row">
+                                                    <label for="customerId" class="col-form-label col-sm-4 col-4">
+                                                        Customer Id
+                                                    </label>
+                                                    <div class="col-sm-4 col-4">
+                                                        <input type="text" name="customerId" id="customerId" class="form-control" placeholder="123-45-6789"/>
+                                                    </div>                                                    
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="name" class="col-form-label col-sm-4 col-4">
+                                                        Name
+                                                    </label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" name="name" id="name" class="form-control" placeholder="Tom Thumb" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label for="town" class="col-form-label col-sm-4 col-4">
+                                                        Town
+                                                    </label>
+                                                    <div class="col-sm-4 col-4">
+                                                        <input type="text" name="town" id="town" class="form-control" placeholder="CA" />
+                                                    </div>
+                                                    <div class="col-sm-4 col-4">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" id="retail_customer" value="retail_customer" name="retail_customer" checked>
+                                                            <label class="form-check-label" for="retail_customer">Retail Customer</label>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6 col-6 sales_form_right_column">
+                                            <fieldset>
+                                                <legend>Shipping</legend>
+<br/>
+                                                <div class="row">
+                                                    <div class="col-md-6 shipping_left">
+                                                        <div class="form-group">
+                                                            <input class="form-check-input" type="radio" name="shipping" id="UPS" value="UPS" checked>
+                                                            <label class="form-check-label" for="UPS"> UPS </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input class="form-check-input" type="radio" name="shipping" id="postal_air" value="US Postal Air">
+                                                            <label class="form-check-label" for="postal_air"> US Postal Air </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 shipping_right">
+                                                        <div class="form-group">
+                                                            <input class="form-check-input" type="radio" name="shipping" id="fed_ex_ground" value="Fed Ex Ground">
+                                                            <label class="form-check-label" for="fed_ex_ground"> Fed Ex Ground </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input class="form-check-input" type="radio" name="shipping" id="fed_ex_air" value="Fed Ex Air">
+                                                            <label class="form-check-label" for="fed_ex_air"> Fed Ex Air </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-6 sales_form_left_column part_ordered">
+                                            <fieldset>
+                                                <legend>Part Ordered</legend>
+                                            
+                                                <div class="form-group row">
+                                                    <label for="part_number" class="col-form-label col-sm-4 col-4">
+                                                        Part Number
+                                                    </label>
+                                                    <div class="col-sm-8 col-8">
+                                                        <input type="text" name="part_number" id="part_number" class="form-control" placeholder="10152" />
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label for="description" class="col-form-label col-sm-4 col-4">
+                                                        Description
+                                                    </label>
+                                                    <div class="col-sm-8 col-8">
+                                                        <input type="text" name="description" id="description" class="form-control" placeholder="Oil Filter" />
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label for="price" class="col-form-label col-sm-4 col-4">
+                                                        Price per part
+                                                    </label>
+                                                    <div class="col-sm-3 col-3">
+                                                        <input type="text" name="price" id="price" class="form-control text-right" placeholder="$7.51" />
+                                                    </div>
+                                                    <div class="col-sm-3 col-3">
+                                                        <label for="quantity" class="col-form-label col-sm-5 col-5">
+                                                            Quantity
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-2 col-2">
+                                                        <input type="text" name="quantity" id="quantity" class="form-control text-right" placeholder="2" />
+                                                    </div>                                                
+                                                </div>
+                                                <div class="form-group row">
+                                                    
+                                                    <div class="col-sm-5 offset-4 col-5">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="oversize_container" value="oversize_container" name="oversize_container">
+                                                        <label class="form-check-label" for="oversize_container">Oversize Container</label>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-6 col-6 sales_form_right_column output">
+                                            <fieldset>
+                                                <legend>Output</legend>                                           
+
+                                            <div class="form-group row">
+                                                <label for="cost" class="col-form-label col-sm-5 col-5">
+                                                    Cost
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" name="cost" id="cost" class="form-control" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="name" class="col-form-label col-sm-5 col-5">
+                                                    Sales Tax
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" name="sales_tax" id="sales_tax" class="form-control" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="name" class="col-form-label col-sm-5 col-5">
+                                                    Shipping & handling
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" name="shipping_and_handling" id="shipping_and_handling" class="form-control" />
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="total" class="col-form-label col-sm-5 col-5">
+                                                    Total
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" name="total" id="total" class="form-control" />
+                                                </div>
+                                            </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-left: -40px;">
+                                        <div class="col-md-2 col-2 compute_buttons">
+                                            <button class="btn btn-compute"> Compute</button>
+                                        </div>
+                                        
+                                        
+
+                                        <div class="col-md-2 col-2 compute_buttons">
+                                            <button class="btn btn-compute"> New Order </button>
+                                        </div>
+
+                                        <div class="col-md-2 col-2 offset-6">
+                                            <button class="btn btn-compute" style="padding: 6% 25%;"> Exit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- form end -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-3 login_section">
+
+                <div class="container login_section_content right_customer_sales">
+                    <!-- <h2> TOYOTA UGANDA </h2> -->
+
+                    
+                        <div class="image">
+                            <img src="images/toyota-logo(big).png" alt="TOYOTA LOGO" />
+                        </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src='js/jquery-3.3.1.slim.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+
+</body>
+
+</html>

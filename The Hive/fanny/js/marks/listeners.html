@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--form action="#">
+        <input value="select me please">
+        <p id="log"></p>
+
+    </form-->
+    <form action="#" id="form">
+        <label for="#">Test Field: <input type="text"></label><br><br>
+        <button type="reset">Reset form</button>
+        <p id="log1"></p>
+    </form>
+
+
+
+
+    <script>
+        /** JS FOR TEST FIELD*/
+
+        function log1Reset(event){
+            log1.textContent = `Form reset! time Stamp: ${event.timeStamp}`
+        }
+        const form = document.getElementById('form')
+        const log1 = document.getElementById('log1')
+        form.addEventListener('reset', log1Reset)
+    </script>
+
+    <!--script>
+
+        /**JS For Select*/
+        
+        function logselect(event){
+            const log = document.getElementById('log')
+            const select = event.target.value.substring(
+            event.selectionStart,event.target.selectionEnd);
+        
+            log.textContent = `You selected: ${select}`
+        }
+            const input = document.querySelector('input');
+            input.addEventListener('select',logselect);
+        
+    </script-->
+
+    <script>
+        /**READING RESET HANDLER THAT WILL BE TRIGGERED AFTER EVENT RESET*/
+
+        function log1Reset(e){
+            log.textContent = `Form reset! time Stamp : ${event.timeStamp}`
+        }
+        //ACCESSING DOM ELEMENTS
+        const form = document.getElementById('log')
+    </script>
+</body>
+</html>

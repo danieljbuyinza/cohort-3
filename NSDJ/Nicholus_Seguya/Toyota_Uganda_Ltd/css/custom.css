@@ -1,0 +1,117 @@
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header {
+  width: 100%;
+  height: 82px;
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.header-logo {
+  text-align: center;
+  font-size: 45px;
+  padding-top: 15px;
+  font-weight: bolder;
+  font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+  color: #333;
+}
+
+.div {
+  background-color: #f2f2f2;
+  border-radius: 2em;
+  display: inline-block;
+  padding: 2em;
+  width: 40%;
+  height: 50%;
+  margin-left: 400px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 15px;
+  color: #fff;
+}
+
+label {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff;
+}
+
+button[type="submit"] {
+  width: 30%;
+  background-color: #f26b1d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button[type="reset"] {
+  width: 30%;
+  background-color: transparent;
+  color: #f26b1d;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid #f26b1d;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+button[type="submit"]:hover {
+  background-color: #ce4f06;
+}
+
+button[type="reset"]:hover {
+  background-color: #facfb6;
+  color: #333;
+}
+
+#display {
+  color: #333;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 85px;
+  height: 85px;
+}
+
+
+footer{
+  display: block;
+
+}
+
+p{
+  padding-top: 15px;
+  color:#fff;
+  text-align: center;
+}

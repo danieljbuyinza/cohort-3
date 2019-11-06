@@ -1,7 +1,7 @@
 /* My 6 objects using the this property ...............*/
 /* 1st object of employee*/
 function employee(namee,agee,dobb,salaryy,positionn,attendancee) {
-    this.name = namee 
+    this.name = namee  //this is a keyword for accessing the properties
     this.age = agee
     this.dob = dobb
     this.salary = salaryy

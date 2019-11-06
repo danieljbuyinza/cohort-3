@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Exam Marks using Prompt</title>
+</head>
+<body>
+    <div>
+        <p id="name"></p>
+        <p id="mark"></p>
+        <p id="cw"></p>
+        <p id="exm"></p>
+    </div>
+    <Script>
+        var studentName = prompt('Student name :')
+        var t1 = parseInt(prompt('Please enter test-1 mark'))
+        var t2 = parseInt(prompt('Please enter test-2 mark'))
+        var cos_mark = parseInt(prompt('Please enter Coursework mark'))
+        var exam_mark = parseInt(prompt('Please enter Final exam mark'))
+
+
+        //  This function Checks for the best done Test
+        //         {Takes in two parameters Test1 and Test2}
+
+        function check_best_done(t1, t2) {
+            //  Checking for best done Test 
+            let best = (t1 > t2) ? t1 : t2;
+      return best;
+        }
+        document.getElementById('name').innerHTML = studentName
+        document.getElementById('mark').innerHTML = 'Your best done test is : ' + check_best_done(t1, t2)
+
+        //This function is to compute the average of the corsework and the best done test out of 40 percent
+        function cosWork(t1, t2, cos_mark) {//Takes in three parameters Test1 ,Test2 and Corsework Mark  
+            let sum_test_cwk = check_best_done(t1, t2) + cos_mark;//Get  the sum of the corsework mark and the value returned by the first fucnction
+            let avg = sum_test_cwk / 2;//Get the average of the sum of corsework mark and the best done test.
+            let mark_outOf_40 = avg * (40 / 100);//Compute the average mark out of 40 percent 
+            // console.log("The Mark Out of 40% is :\t" + mark_outOf_40);//Output the mark out of 40
+            return mark_outOf_40;//Return the mark out of 40 percent for other functions to use
+        }//End of Fucntion
+
+
+        document.getElementById('cw').innerHTML = 'Your mark out of 40 is : ' + cosWork(t1, t2, cos_mark)
+
+        //This Computes the final mark out of 100 percent
+        function final_mark(t1, t2, cos_mark, exam_mark) {//It takes in 4 paramaters
+            let exam_outOf_60 = exam_mark * (60 / 100);//Compute the exam mark out of 60 percent
+            let mark_outOf_100 = exam_outOf_60 + cosWork(t1, t2, cos_mark); //Get the sum of the Mark out 40% and the Mark out of 60%
+            // console.log("The Mark Out of 60% is :\t" + exam_outOf_60) //Output the sum as the Final Mark out of 60%
+            // console.log("The Final Mark Out of 100% is :\t" + mark_outOf_100); //Output the sum as the Final Mark out of 100%
+            return mark_outOf_100;
+        }//End Of Function
+
+        document.getElementById('exm').innerHTML = 'Your mark out of 100 is : ' + final_mark(t1, t2, cos_mark, exam_mark)
+    </Script>
+    
+</body>
+</html>

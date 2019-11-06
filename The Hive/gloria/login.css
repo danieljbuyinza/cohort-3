@@ -1,0 +1,45 @@
+.all-in{
+    align-content: center;
+
+}
+
+.all-1{
+    padding: 50px;
+    margin:auto;
+    width: 600px;
+    height: 600px;
+    border: 2px solid white;
+    background-color: rgb(167, 163, 158);
+    border-radius: 86px;
+    box-shadow:0 0 10px 15px #ac8d8d;
+
+}
+img{
+    margin-bottom: 50px;
+    width: 300px;
+    padding: 20px;
+    margin-left: 100px;
+    border-radius: 35px;
+}
+input{
+    margin-bottom: 25px;
+    width: 300px;
+    padding: 20px;
+    align-content: center;
+    border-radius: 25px;
+    margin-left: 100px;
+}
+button{
+width: 100px;
+padding: 20px;
+border-radius: 15px;
+margin-left: 100px;
+margin-bottom: 30px;
+color: red;
+}
+form{
+    height: 800px;
+    width: 900px;
+    margin: auto;
+    
+}

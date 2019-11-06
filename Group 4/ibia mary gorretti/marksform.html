@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marks</title>
+    <link rel="stylesheet" href="marksform.css">
+    <script>
+        let d = new Date()
+        //alert("today is: "+Date())
+
+    </script>
+    <script>
+        function check() {
+        
+            var test1 = document.getElementById('test1')
+            var test2 = document.getElementById('test2')
+            var bestTest = document.getElementById('best')
+            var coswork = document.getElementById('coswork')
+            var totalCoswork = document.getElementById('totalCoswork')
+            var cosworkAvrge =document.getElementById('cosworkAvrge')
+            var cosworkMark = document.getElementById('cosworkMark')
+            var exam = document.getElementById('exam')
+            var finalMark = document.getElementById('finalMark')
+            if (Name.value == '') {
+                alert('test1 should not be empty')
+                test1.style.border='2px solid red'
+                test2.style.border='2px solid blue'
+                bestTest.style.border='2px solid yellow'
+                coswork.style.border='2px solid green'
+                totalCoswork.style.border='2px solid indigo'
+                cosworkAvrge.style.border='2px solid purple'
+                cosworkMark.style.border='2px solid violet'
+                exam.style.border ='2px solid pink'
+                finalMark.style.border = '2px solid black'
+                return false
+            }
+        }
+
+    </script>
+</head>
+
+<body style="background-color: white;width: 100%;height:900px;margin: 0px;text-align: center;">
+    <header style="width: 100%;height: 82px;background:white;border-bottom: 1px solid #133783;"></header>
+    <br /><br />
+    
+    <form action="#" style="background-color: teal;">
+
+        
+        <label for="name">studentName:</label>
+        <input type="text" id="name" name="student_name"><br/><br/>
+        </div>
+        <div>
+            <label for="name">test1</label>
+            <input type="text" id="test1" name="test1"><br/><br/>
+        </div>
+        <div>
+            <label for="name">test2</label>
+            <input type="text" id="test2" name="test2"><br/><br/>
+        </div>
+        <div>
+            <label for="name">best</label>
+            <input type="text" id="best" name="best"><br/><br/>
+        </div>
+        <div>
+            <label for="name">coswork</label>
+            <input type="text" id="coswork" name="coswork"><br/><br/>
+        </div>
+        <div>
+            <label for="name">totalCoswork</label>
+            <input type="text" id="totalCoswork" name="totalCoswork"><br/><br/>
+        </div>
+        <div>
+            <label for="name">cosworkAvrge</label>
+            <input type="text" id="cosworkAvrge" name="cosworkAvrge"><br/><br/>
+        </div>
+        <div>
+            <label for="name">exam</label>
+            <input type="text" id="exam" name="exam"><br/><br/>
+        </div>
+        <div>
+            <label for="name">finalMark</label>
+            <input type="text" id="finalMark" name="finalMark"><br/><br/>
+        </div>
+        <form action="">
+            <span><input style="width: 100px;" type="submit" onclick="check()"></button>
+            </span>
+            <span><button name="button">Cancel</button>
+            </span>
+        </form>
+
+
+</body>
+
+</html>

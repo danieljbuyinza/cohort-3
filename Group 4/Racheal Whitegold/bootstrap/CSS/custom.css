@@ -1,0 +1,40 @@
+* {
+    text-align: center;
+    }
+
+h1 {
+    color: brown
+}
+h3 {
+    color: blue
+}
+
+.thead {
+    color: blueviolet;
+    background-color: rgb(230, 173, 183);
+}
+.col-lg-9 {
+    background-color: rgb(148, 148, 238);
+    height: 400px;
+}
+
+.col-sm-3 {
+    background-color: rgb(241, 147, 163);
+    height: 400px;
+}
+
+.col-lg-4-a {
+    background-color: rgb(134, 34, 51);  
+    height: 300px;
+    width: 300px;
+}
+
+.col-lg-4-b {
+    background-color: rgb(148, 66, 216); 
+    height: 300px; 
+    width: 300px;
+}
+
+.row {
+  padding: 20px;
+}

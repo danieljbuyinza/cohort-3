@@ -5,39 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Students Marks</title>
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!--JS-->
+    <script>
+        function check(){
+  /** CREATE VARIABLES FOR EACH ELEMENT    */
+        //var marks = document.getElementById('marks')
+        var test1 = document.getElementById('test1')
+        var test2 = document.getElementById('test2')
+        var exam = document.getElementById('exam')
+        var coursework = document.getElementById('coursework')
+        if(test1.value==''&&test2.value==''&&exam.value==''&& coursework.value==''){
+            alert('Please enter your marks !!');
+           
+            test1.style.border='2px solid rgb(117, 27, 95)';
+            test2.style.border='2px solid rgb(117, 27, 95)';
+            exam.style.border='2px solid rgb(117, 27, 95)';
+            coursework.style.border='2px solid rgb(117, 27, 95)';
+            return false;
+        }
+        function addMarks(){
+            if(test1.value!='empty' && test2.value!='empty' && exam.value!='empty' && coursework.value!='empty'){
+                let Total = test1 + test2 + exam + coursework ;
+                console.log('The total marks is : \t',+Total);
+            }
+            addMarks();
+        }
+    }
+    </script>
+     <script type="text/javascript">
+        /**var visitorName = prompt('Input your name:')
+        if(visitorName!=null && visitorName != ''){
+            alert('Your name is : ' +visitorName)
+        }
+        else{
+            alert('Blank name...............!')
+        }*/
+    </script>
+
 </head>
-<body>
+<body style="background-image: url('img/floral-bg.jpg');display:cover;height: 100%;width: 100%;">
     <div class="column">
         <div class="row">
             
-            <div class="col-m-6 offset-3" style="padding: 20px;">
-                <div class="jumbotron">
+            <div class="col-m-6 offset-4" style="padding: 20px;">
+                <div class="jumbotron" style="background: rgb(179, 144, 164); border: 2px rgb(117, 27, 95);border-radius: 3em;">
 
-                    <form action="">
-                            <h2>Marks of students</h2> 
-                            <label for="">Test 1</label>
-                            <input type="text" class="form-control">
-                            <label for="">Test 1</label>
-                            <input type="text" class="form-control">
-                            <label for="">Exam</label>
-                            <input type="text" class="form-control">
-                            <label for="">course work</label>
-                            <input type="text" class="form-control"><br><br>
-                            <input type="submit" class="btn btn-outline-info" value="Final mark">
+                    <form action="#" method="" class="student-form">
+                            <h2 class="mark-heading">Marks of students</h2> 
+
+                            <!--form items-->
+                            <label for="">Test One</label>
+                            <input type="text" name="test1" id="test1" class="form-control style" >
+                            
+                            <label for="">Test Two</label>
+                            <input type="text" name="test2" id="test2" class="form-control" >
+                            
+                            <label for="">Exam Mark</label>
+                            <input type="text" name="exam" id="exam" class="form-control" >
+                            
+                            <label for="">Course work</label>
+                            <input type="text"  name="coursework" id="coursework" class="form-control"><br><br>
+                            
+                            <!--form Buttons-->
+                            <input type="submit" class="btn btn-outline" style="background-color: rgb(117, 27, 95);color:#ffffff;border-radius: 2em;" value="Final mark" onclick="check()" onsubmit="addMarks()">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="reset" class="btn" value="Reset" style="background-color: rgb(117, 27, 95);color:#ffffff;border-radius: 2em;">
                         </form>
-
+ 
             </div>
         </div>
-            <div class="col-m-6"  style="padding: 20px;">
-                    <h2>Marks of students</h2> 
+            <!--div class="col-m-6"  style="padding: 20px;">
+                <div class="jumbotron" style="background: rgb(223, 151, 193);">
+                    <h2 class="mark-heading">Total Marks</h2>
+                </div-->
+                     
             </div>
         </div>
     
     </div>
+
+
     
 
-
-<script src="./js/bootstrap.min.js"></script>    
+<script src="js/bootstrap.min.js"></script>
+   
 </body>
 </html>

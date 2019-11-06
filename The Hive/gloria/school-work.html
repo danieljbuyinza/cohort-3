@@ -4,60 +4,86 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>form for students</title>
+        <title>Form For Students</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="students.css">
-        
+
+        <script>
+            function check(){
+                // create variables for all elements
+        var name =document.getElementById('name')
+        var test1  =document.getElementById('test1')
+        var test2 =document.getElementById('test2')
+        var Coursework =document.getElementById('Coursework')
+        var Exam =document.getElementById('Exam')
+        if (name.value =='' && test1.value==''&& test2.value=='' && Coursework.value=='' && Exam.value==''){
+        alert('the below fields should not be empty');
+        name.style.border='2px solid red'
+        test1.style.border='2px solid red'
+        test2.style.border='2px solid green'
+        Coursework.style.border='2px solid green'
+        Exam.style.border='2px solid red'
+    // return false
+        }
+    }
+        </script>
+
+
     </head>
     <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <!--div class="col-md-6"-->
+                <form action="#">
                     <section>
-                                 <div class="sch-form">
+      <!--div class="sch-form">
  
-                                     <img src="alex-loup-CsP9SwLpe_Y-unsplash.jpg" style=" border-radius:20px;width:500px; height:500px" >
-                                 </div>
-                                </div>
-                                <br/>
-                                 
-                    <div class="col-md-6">   
-                            <div class="right" style=" border-radius:20px;box-shadow: 120px;padding: 100px; width: 500px; height:500px; background-color: rgb(233, 227, 227); "> 
+ img src="alex-loup-CsP9SwLpe_Y-unsplash.jpg" style="margin-left: 10px; border: 20px solid grey; border-radius:20px;width:500px; height:600px"
+ 
+ 
+  </div-->
+                    <div class="col-md-12">   
+                            <div class="right" style="margin-left:10px; border: 20px solid grey; border-radius:20px;box-shadow: 120px;padding: 100px; width: 500px; height:600px; background-color: rgb(233, 227, 227); "> 
                      <form action="">
                              <p>Calculate Marks</p>                            
                      <label for="name">
-                         <span><input type="text"name =""placeholder="Student's test1"> </span>
+                            <input name=""style="width: 300px;" type="" id="name" placeholder="students name"><br/>
+                            <br/>
+    
+                         <span><input style="width: 300px;" type="text"name ="test1" id ="test1" placeholder="Student's test1"> </span>
                          <br/>
                          <br/>
                          
                      <label for="marks">
-                         <span><input type="text"name ="" placeholder="Student's Test 2"> </span>
+                         <span><input type="text"name ="test2"style="width: 300px;" id="test2" placeholder="Student's Test 2"> </span>
                      </label>
                      <br/>
                      <br/>
                      <label for="marks">
-                         <span><input type="text"name ="" placeholder="Student's Courkwork Marks"> </span>
+                         <span><input type="text"style="width: 300px;"name ="name3" id="Coursework" placeholder="Student's Coursework Marks">  </span>
                          <br/>
                          <br/>
                          
                      <label for="marks">
-                         <span><input type="text"name ="" placeholder="Student's Exam Marks"> </span>
+                         <span><input style="width: 300px;" type="text"name ="name4" id="Exam" placeholder="Student's Exam Marks"> </span>
                      </label>
                      <br/>
                      <br/>
-                     </form>
-                 <span><button>submit</button></span>
-                 <span><button>causel</button></span>
+                
+                     <span><button onclick="check()" style="width: 100px;">submit</button></span>
+      
                 </div>  
      </div>
  </section>
- 
+</form>
             
             
             </div>
 
         </div>
+        &#169;Chandi Mary Gloria
 
+<script src="./js/bootstrap.min.js"></script>
 
     </body>
     </html>

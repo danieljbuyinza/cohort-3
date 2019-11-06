@@ -1,6 +1,6 @@
 /*  assignment:  define 3 functions, 
 function 1:should add 3 numbers(30,60,100),
-function 2:should multiply result from funtion 1 by 2, 
+function 2:should multiply result from functions 1 by 2, 
 function 3:should fin the remainder of funtion2 result divided by 15  
 */
 

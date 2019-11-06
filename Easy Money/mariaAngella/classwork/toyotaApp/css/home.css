@@ -1,0 +1,24 @@
+/* .fieldSet {
+    margin: 1%;
+    padding: 2%;
+} */
+
+fieldset {
+    min-height: 320px !important;
+    padding: 5% !important;
+    margin: 1% !important;
+    border: 1px solid !important;
+    background-color: #F3A274;
+}
+
+legend {
+    width: unset !important;
+}
+
+.container {
+    background-color: #FBCEB1;
+}
+
+input[type=submit] {
+    margin-bottom: 15px !important;
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> MARK'S CALCULATOR WITH PROMPTS </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome/css/all.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
+
+
+</head>
+
+<body id="prompt_body">
+
+    <div class="container prompt_content">
+            
+            <h1 style="color: #7c0a43;"> COMPUTE STUDENT'S MARKS  </h1>
+            
+            <div class="click_here text-center mt-2 pb-2">
+            <span class="pulse-button" id="calculate_mark"> CLICK HERE </span> 
+            </div>
+            
+            <div id="marks_output" class="marks_output">
+                <h2 style="border-bottom: 2px solid #7c0a43;"> 
+                    <span id="studentName" class="text-uppercase"></span> RESULTS </h2>
+                 <div class="final_mark text-right" style="border-bottom: 5px solid #7c0a43;">
+                    
+                    Final mark : <span id="final_mark"></span>
+                    
+                    </div>
+                <div class="row" style="padding: 3% 0%; border-bottom: 3px solid #7c0a43; ">                    
+                    <div class="col-md-5 input">
+                        <h5 class="text-center"> INPUT </h5>
+                        
+                        <p> TEST 1 : <span id="test1"></span> </p>
+                        <br/>
+                        <p> TEST 2 : <span id="test2"></span> </p>
+                        
+                        <br/>
+                        <p> COURSEWORK : <span id="coursework_mark"></span> </p>
+                        
+                        <br/>
+                        <p> FINAL EXAM : <span id="exam_mark"></span> </p>
+                    </div>
+                    
+                    
+                    <div class="col-md-5 output"style="border-left: 2px solid #7c0a43;">
+                    <h5 class="text-center"> OUTPUT </h5>
+                        <br/><br/>
+                        <p> BETTER DONE TEST : <span id="higher_mark"></span> </p>
+                        
+                        <br/><br/>
+                        
+                        <br/><br/>
+                        
+                        <p> FINAL COURSEWORK MARK : <span id="final_coursework"></span> </p>
+
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                            <div class="final_mark text-right">
+                                 Calculate Another Student's Marks
+                            
+                            <button class="btn btn-danger btn-sm" onclick="calculate_final_mark()">  CLICK HERE </button>
+                            
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script src='js/jquery-3.3.1.slim.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+
+    <script type="text/javascript">
+    //accessing the marks output section element by id
+    var marks_output_section = document.getElementById('marks_output');
+        
+        //hiding the section using javascript 
+        marks_output_section.style.display = "none";
+        
+    //accessing the button element by id
+    var calculate_mark_button = document.getElementById('calculate_mark');
+    
+    //adding an event listener to the button
+    calculate_mark_button.addEventListener('click' , calculate_final_mark);
+    
+    /* 
+    THE MAIN parent function that calls the other functions and eventually gets the students final mark
+    it shall be the handler for the onclick event of the button on the page
+    */
+    function calculate_final_mark(event){
+        marks_output_section.style.display = "none";
+        var studentName , test1 , test2 , coursework_mark , exam;
+        
+        // getting the different values by calling the different HELPER functions that trigger the prompts
+        studentName = input_student_name();
+        test1 = input_student_test1();
+        test2 = input_student_test2();
+        coursework_mark = input_student_coursework_mark();
+        exam = input_student_exam_mark();
+        
+        var higher_mark , final_coursework , final_student_mark ;
+        
+        //calculating the different marks by calling the respective calculation functions
+        higher_mark = check(test1 , test2);
+        final_coursework = coursework(test1,test2,coursework_mark);
+        final_student_mark = final_mark (test1,test2,coursework_mark,exam);
+        
+        console.log("Student name is "+ studentName + " Higher mark is "+higher_mark+" \n Final coursework is "+final_coursework+" \n Final Mark is "+ final_student_mark);
+        
+        marks_output_section.style.display = "block";
+        
+        //accessing elements of the DOM
+        var test1_element , test2_element , coursework_mark_element , exam_element , higher_mark_element , final_coursework_element , final_mark_element , studentName_element;
+        
+        test1_element = document.getElementById('test1');
+        test2_element = document.getElementById('test2');
+        coursework_mark_element = document.getElementById('coursework_mark');
+        exam_element = document.getElementById('exam_mark');
+        higher_mark_element = document.getElementById('higher_mark');
+        final_coursework_element = document.getElementById('final_coursework');
+        final_mark_element = document.getElementById('final_mark');
+        studentName_element = document.getElementById('studentName');
+        
+        //inserting the respective values into the html page using the innerHTML method
+        test1_element.innerHTML = " "+ test1;
+        test2_element.innerHTML = " "+ test2;
+        coursework_mark_element.innerHTML = " "+ coursework_mark;
+        exam_element.innerHTML = " "+ exam;
+        higher_mark_element.innerHTML = " "+ higher_mark;
+        final_coursework_element.innerHTML = " "+ final_coursework;
+        final_mark_element.innerHTML = " "+ final_student_mark;
+        studentName_element.innerHTML = " "+ studentName +"'S";
+        
+        }
+        
+    
+    /* ------------------------ HELPER FUNCTIONS(functions helping to perform different purposes)---------------------------*/
+    /*
+        helper function to check the datatype of values
+        parameter 1 is the value to be checked and parameter 2 is the datatype it should be
+    */
+    function check_variable(input_variable , expected_datatype){
+        
+        //if expected datatype is a number then first convert the string to an integer and then check that
+        if(expected_datatype == "number"){
+                              
+                if(parseInt(input_variable)){
+                    //if it is true then that means a number was entered                    
+                            return true;
+                    }else{
+                        //if it is false then that means that means it is a string  was entered
+                            return false;
+                        }
+                
+            }else if (expected_datatype == "string"){
+                //if a string is expected data type
+                
+                if(parseInt(input_variable)){
+                    //if it is true then that means a number was entered yet a string is required
+                    
+                            return false;
+                    }else{
+                        //if it is false then that means that means it is actually a string 
+                            return true;
+                        }
+                
+                }
+      
+        }
+    
+    /* function to trigger the prompt (request) for student name input from the user*/
+    function input_student_name(){
+        
+         var Name = prompt("Input Student's name: ")
+        
+        if(Name != null && Name != ""){
+            
+            //calling the check variable function
+            if(check_variable(Name,"string") === true ){
+                 //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return Name;         
+       
+                }else{
+                    //else alert saying the value should be the right data type
+                        alert("!! Student's Name should be a Valid Name with only Alpha Characters !!");
+                        
+                        //re-call the function until user enters valid input
+                        input_student_name()
+                    }                
+            
+            }else {
+                //if no name is entered, show an alert and then prompt the user to enter the students name
+                    alert("!! Please Enter The Student's Name !!");
+                    
+                    //re-call the function until user enters valid input
+                    input_student_name();
+                }
+        
+        }
+        
+        /* function to trigger the prompt (request) for student test 1 mark input from the user*/
+    function input_student_test1(){
+        
+         var studentTest1 = prompt("Input Student's Test 1 Mark: ")
+        
+        if( studentTest1 != null && studentTest1 != ""){
+            
+            //calling the check variable function
+             if(check_variable(studentTest1,"number") === true){
+                 
+                 console.log(parseInt(studentTest1))
+                 //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return parseInt(studentTest1);
+       
+                }else{
+                    //else alert saying the value should be the right data type
+                        alert("!! Student's Test 1 Mark should be a Valid Integer !!");
+                        
+                        //re-call the function until user enters valid input
+                        input_student_test1();
+                    }
+            
+            }else {
+                //if no name is entered, show an alert and then prompt the user to enter the students test 1 mark
+                    alert("!! Please Enter The Student's Test 1 Mark !!");
+                    
+                    //re-call the function until user enters valid input
+                    input_student_test1();
+                }        
+        }
+        
+        /* function to trigger the prompt (request) for student test 2 mark input from the user*/
+    function input_student_test2(){
+        
+         var studentTest2 = prompt("Input Student's Test 2 Mark: ")
+        
+        if( studentTest2 != null && studentTest2 != ""){
+           
+            //calling the check variable function     
+            if(check_variable(studentTest2,"number") === true ){
+                console.log(parseInt(studentTest2));
+                //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return parseInt(studentTest2);
+        
+                }else{
+                    //else alert saying the value should be the right data type
+                        alert("!! Student's Test 2 Mark should be a Valid Integer !!");
+                        
+                        //re-call the function until user enters valid input
+                        input_student_test2();
+                    }
+            
+            }else {
+                //if no name is entered, show an alert and then prompt the user to enter the students test 2 mark
+                    alert("!! Please Enter The Student's Test 2 Mark !!");
+                    
+                    //re-call the function until user enters valid input
+                    input_student_test2();
+                }        
+        }
+        
+        /* function to trigger the prompt (request) for student coursework mark input from the user*/
+    function input_student_coursework_mark(){
+        
+         var studentCourseworkMark = prompt("Input Student's CourseworkMark: ")
+        
+        if( studentCourseworkMark != null && studentCourseworkMark != ""){
+
+            //calling the check variable function
+            if(check_variable(studentCourseworkMark,"number") === true){
+               console.log(parseInt(studentCourseworkMark));
+                //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return parseInt(studentCourseworkMark);         
+       
+                }else{
+                    //else alert saying the value should be the right data type
+                        alert("!! Student's Coursework Mark should be a Valid Integer !!");
+                        
+                        //re-call the function until user enters valid input
+                        input_student_coursework_mark();
+                    }
+            
+            }else {
+                //if no mark is entered, show an alert and then prompt the user to enter the students coursework mark
+                    alert("!! Please Enter The Student's Coursework Mark !!");
+                    
+                    //re-call the function until user enters valid input
+                    input_student_coursework_mark();
+                }        
+        }
+        
+         /* function to trigger the prompt (request) for student coursework mark input from the user*/
+    function input_student_exam_mark(){
+        
+         var studentExamMark = prompt("Input Student's Exam Mark: ")
+        
+        if( studentExamMark != null && studentExamMark != ""){
+                
+             //calling the check variable function to check if it is of the right data type
+            if(check_variable(studentExamMark,"number") === true){
+                 console.log(parseInt(studentExamMark));
+                //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return parseInt(studentExamMark);         
+       
+                }else{
+                    //else alert saying the value should be the right data type
+                        alert("!! Student's Exam Mark should be a Valid Integer !!");
+                        
+                        //re-call the function until user enters valid input
+                        input_student_exam_mark();
+                    }
+            
+            }else {
+                //if no mark is entered, show an alert and then prompt the user to enter the students exam mark
+                    alert("!! Please Enter The Student's Exam Mark !!");
+                    
+                    //re-call the function until user enters valid input
+                    input_student_exam_mark();
+                }        
+        }
+        
+        
+         /* 
+         function to trigger the prompt (request) for input from the user
+            the first parameter passed is supposed to act as a guide as to what input is required from the user
+            the second parameter passed is supposed to act as a guide as to what data type the input should be
+         */
+    function receive_input(required_input , required_input_type){
+        
+         var received_input = prompt("Input Student's "+ required_input +" : (Must be a "+required_input_type+")")
+        
+        if( received_input != null && received_input != ""){
+                
+            //calling the check variable function to check if it is of the right data type
+            if(check_variable(received_input, required_input_type) === true){
+                 
+                if(required_input_type == "number"){
+                    //if a number is required then convert the string to an integer
+                    
+                //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return parseInt(received_input);  
+       console.log(parseInt(received_input));
+                    }else{
+                        //else its a string and so leave it as it is
+                //return the input that has been entered by the user if it is not empty and of the right datatype   
+                return received_input;         
+                        }
+
+       
+                }else{
+                    //else alert saying the value should be the right data type
+                        alert("!! Student's "+ required_input +" Mark should be a "+required_input_type+" !!");
+                       
+                        //re-call the function until user enters valid input
+                        receive_input();
+                    }
+            
+            }else {
+                //if no value is entered, an alert is showed to request the user to enter valid input and then re-prompted for an entry
+                    alert("!! Please Enter The Student's "+ required_input +" !!");
+                    
+                    //re-call the function until user enters valid input
+                    receive_input();
+                }        
+        }
+        
+         /*--------------------------------END OF HELPER FUNCTIONS-----------------------------------------------------*/
+       
+/* -----------------CALCULATION FUNCTIONS(functions tasked with calculating the students final mark)---------------------------*/
+
+     //function to check which test mark is higher
+    function check(mark1 , mark2){ 
+    
+    //checking which mark is higher and assigning it to the variable higher_mark
+    let higher_mark = mark1 > mark2 ? mark1 : mark2; 
+    
+    //console.log("The better done test is \t"+higher_mark);
+    
+    return higher_mark;
+    
+    }
+    
+    //calculating final coursework mark
+    function coursework(test1,test2,mark){
+        
+            let result = (check(test1 , test2) + mark)/2;
+            
+           // console.log("\n The average of test mark "+ check(test1 , test2) +" and coursework mark "+ mark +" is \t"+result);
+           
+           // console.log("\n The final coursework mark is \t"+result * (40/100));
+            
+            return result * (40/100) //returning the final coursework mark
+            
+        }
+        
+    //computing the final course mark
+    function final_mark(test1,test2,coursework_mark,exam_mark){
+        //getting the remaining 60%
+        let temp = exam_mark * (60/100);
+        
+        //calculating the final mark
+        var final_mark = (temp + coursework(test1,test2,coursework_mark));
+        
+        //console.log("\nThe final mark is " + (temp + coursework(test1,test2,coursework_mark)))
+        
+        return final_mark;
+        
+        }
+
+/*------------------------------- END OF CALCULATION FUNCTIONS--------------------------------------------------*/
+    
+    //calling the main parent function
+   // calculate_final_mark();
+    
+    </script>
+</body>
+
+</html>
