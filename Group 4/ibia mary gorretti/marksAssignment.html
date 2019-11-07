@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Marks</title>
+</head>
+<body style="background-color: #e9ebee;">
+    <div>
+    <header style="width: 100%;height: 82px;background:white;">COMPUTING STUDENTS MARKS</header>
+   <div id ="final" style="color:red;">
+   </div> 
+<script>
+    var Name = prompt(studentName)
+        var studentName = prompt('input studentName:')
+            alert('Your Name is: '+studentName)
+    
+        var test1 = parseInt(prompt('input test1 marks:'))
+            alert('test1 marks are: '+test1)
+        
+        var test2 = parseInt(prompt('input test2 marks:'))
+            alert('test2 marks are: '+test2)
+
+        var checktests = (test1,test2) =>{
+        var best = (test1>test2)?test1:test2
+          alert('your highest test is: ' +best)
+          return best
+        }
+
+            var coswork = parseInt (prompt('input coswork marks:'))
+            alert('coswork marks are: ' +coswork)
+       
+            var totalcoswork = coswork + checktests(test1,test2)
+            alert('your total course work marks are:'+totalcoswork)
+        
+        var cosworkAvrge = (totalcoswork/2)
+        alert ('cosworkAvrge is:' +cosworkAvrge)
+        
+        var cosworkMark = (cosworkAvrge*(40/100))
+        alert ('cosworkMark is:' +cosworkMark)
+    
+        var exam = prompt('input exam marks:')
+        alert('exam marks are:' +exam)
+    
+          
+        
+
+       var finalResult = (exam * (60 / 100)) + cosworkMark
+       document.getElementById('final').innerHTML = 'your final Result is :' + finalResult
+          
+            </script>
+    
+</body>
+</html>

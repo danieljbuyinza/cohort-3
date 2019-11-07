@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Marks</title>
+        
+        <link rel="stylesheet" href="css/index.css" />
+        <script>
+        let check = () =>{
+            //create variables 
+            var test1 = document.getElementById('test1');
+            var test2 = document.getElementById('test2');
+            var Coursework = document.getElementById('Coursework');
+            var exam = document.getElementById('exam');
+            if (test1.value=="" && test2.value=="" && Coursework.value=="" &&exam.value=="")
+            alert('all fields must be filled');
+            test1.style.border = '1px solid red'
+            test2.style.border = '1px solid red'
+            Coursework.style.border = '1px solid red'
+            exam.style.border = '1px solid red'
+            return false;
+        }
+        </script>
+    </head>
+
+    <body>
+        <section>
+            <div class="mainWrapper">
+                <div class="picWrap">
+                    <div class="marks">88%</div>
+                    <img class="sidePic" src="./images/exam.jpg" alt="Image Not Found" />
+                </div>
+                <div class="infoWrap" action="#">
+                    <form class="marksForm">
+                        <h3>Marks Calculator</h3>
+                        <div class="inputs">
+                            <input type="text" placeholder="Test 1"  name="test1" id="test1" />
+                            <input type="text" placeholder="Test 2"  name="test2" id="test2" />
+                        </div>
+                        <div class="inputs">
+                            <input type="text" placeholder="Course work" name="Coursework" id="Coursework" />
+                            <input type="text" placeholder="Exam" name="=Exam" id="Exam" />
+                        </div>
+                        <button class="button" onclick="check()">Calculate</button>
+                        <button class="button">Reset</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>

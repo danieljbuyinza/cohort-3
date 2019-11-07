@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      /*styling elements with CSS*/
+      /*styling of the divs*/
+      div {
+        background-color: rgb(230, 223, 228);
+        color: #501b1d;
+        height: 10cm;
+        
+        padding: 5px;
+        border-radius: 30px;
+        margin-top: 2cm;
+        margin-left: 13cm;
+        margin-right: 13cm;
+        font-weight: bolder;
+      }
+      /*this is to style the form that contains the username and login */
+      form {
+        margin: 6px;
+        margin-left: 1.8cm;
+        margin-right: 1cm;
+        margin-top: 0.9cm;
+      }
+      /*styling of the input labels i.e username and login*/
+      label {
+        font-size: 20px;
+        margin-top: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      /*this is css for the input fields*/
+      input {
+        height: 0.7cm;
+        width: 6cm;
+        line-height: 30px;
+        border: solid 1px #501b1d;
+        border-radius: 5px
+      }
+      /* button styling*/
+      button {
+        width: 3cm;
+        height: 1cm;
+        color: white;
+        border-radius: 6px;
+        background-color: #83677b;
+        border: solid 2px #501b1d;
+        font-size: 16px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+    </style>
+
+    <title>Login exercise</title>
+  </head>
+  <body style="background-image: url('redcar.jpg'); background-size: cover;">
+    
+    <div>
+      <form action="#" onsubmit="">
+        <h1 style="margin-left:1.5cm ;;color:#501b1d">Login !</h1>
+        <label for="username">Username</label> <br />
+        <br />
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          aria-describedby="emailHelp"
+          placeholder="Enter username"
+        />
+        <br />
+        <br />
+        <label for="password">Password</label> <br />
+        <br />
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Password"
+        />
+        <br />
+        <br />
+        <br />
+        <button type="submit" class="btn " onclick="check()">Login</button>
+        <button type="reset" class="btn " id="cancel">Cancel</button>
+      </form>
+      <p id="log"></p>
+      <!--this is where the message on the reset button will be displayed-->
+    </div>
+    <script>
+      //this function is to reset the form once it has been canceled and also print the time stamp
+      function logreset(event) {
+        log.textContent = `form reset! time stamp: ${event.timeStamp}`;
+      }
+      const form = document.getElementsByTagName("form");
+      const log = document.getElementById("log");
+      form[0].addEventListener("reset", logreset);
+
+      //this is a function to check whether username and password have been entered
+      function check() {
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        if (username.value == "") {
+          alert("Username is required");
+          username.style.border = "3px solid red";
+          return false;
+        }
+        if (password.value == "") {
+          alert("password is required");
+          password.style.border = "3px solid red";
+
+          return false;
+        }
+
+        // this function is to return username && password after login
+        if (username.value != null && password.value != null) {
+          alert(
+            "your username is : " +
+              username.value +
+              "\n" +
+              "your password is :" +
+              password.value
+          );
+        }
+      }
+
+      //this function is to alert once a text has been selected
+      function logselect(event) {
+        // const username = document.getElementById('username')
+        const select = event.target.value.substring(
+          event.selectionstart,
+          event.target.selectionEnd
+        );
+        alert(`you selected username: ${select}`);
+      }
+      const input = document.getElementById("username");
+      input.addEventListener("select", logselect);
+    </script>
+  </body>
+</html>

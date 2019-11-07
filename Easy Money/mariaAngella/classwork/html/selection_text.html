@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input value='try to select me please'>
+        <p id="log"></p>
+    </form>
+
+    <!-- select text in the text box and computer tells you what you selected -->
+<script>
+/* creating reset handler that will be triggered after event reset */
+function logselect(e){
+    const log = document.getElementById('log')
+    const select = event.target.value.substring(event.target.selectionStart,event.target.selectionEnd)
+    log.textContent = `You selected: ${select}`
+   
+}
+
+// accessing dom elements and set a listner to input tag
+const input = document.querySelector('input');
+input.addEventListener('select',logselect) // logselect is a function in JS and is not called as logselect() 
+
+//can also use query selector to access an id using #
+// const input = document.querySelector('#log');
+
+</script>
+</body>
+</html>

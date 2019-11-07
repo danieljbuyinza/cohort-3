@@ -1,0 +1,51 @@
+body{
+    background-image: url("/img/blue.jpg");
+    font-family: 'poppins', sans-serif;
+    height: 100vh;   
+}
+
+.hd{
+    border: solid black;
+}
+
+/* the main class "content" */
+.Content{
+    background-color:rgba(9, 11, 27, 0.86);
+    height: 500px;
+    position: absolute;
+    top: 53px;
+    width: 42%;
+    box-shadow: 0 0 10px 9px #00000096;
+    text-align: center;
+    margin: 31px 0 0 28%;
+}
+h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: seashell;
+
+/* Class styling */
+}
+
+#bash{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: seashell;
+    margin: 62px;
+}
+
+#bash1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: seashell;
+    margin: 62px;
+    color: springgreen;
+}
+
+#bash2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: seashell;
+    margin: -64px;
+    color: springgreen;
+}
+
+
+
+  

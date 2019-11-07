@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            
+            .login{
+            background-color:#a9bfce;
+            height: 500px;
+            width: 900px;
+            color: solid grey;
+            padding: 3em;
+            border-radius: 3em;
+            display:inline-block;
+            transform: scale(.9);
+            transition: trnsform.6s;
+            margin-left: 160px;
+            padding-bottom: 100px;
+        
+
+        }
+
+        #baata{
+            margin-left: 300px;
+            font-size: 2rem;
+            color: black;
+            }
+
+            #baata1{
+                height: 40px;
+                width: 300px;
+                color: #08ebb6;
+                
+                }
+                #baata2{
+                    height: 40px;
+                    width: 300px;
+                    color: #08ebb6;
+                    
+                }
+            </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="login">
+            <h1 style="margin-left: 350px; color:black; font-size: 40px;">Login</h1>
+            <form >
+                <div id="baata">
+                        <label>Username:</label>
+                        <br> 
+                            <input type="text" id="baata1" placeholder="Please enter your Username"><br><br>
+                            <label>Password:</label> <br> 
+                            <input type="text" id="baata2" placeholder="Please enter your Password"><br><br>
+                            <button type="login" style="width: 150px; height: 40px;  background-color: rgb(122, 122, 103);">Login</button> 
+                            <button type="cancel" style="width: 150px; height: 40px; color: black; background-color:rgb(122, 122, 103);">Cancel</button>
+                            <p id='event'></p>
+                        </form>
+                        <script>
+                            function selectevent(event) {
+                                const log = document.getElementById('event')
+                                const select = event.target.value.substring(event.selectionStart,event.target.selectionEnd
+                                )
+                                log.textContent= `Username: ${select}`
+                                }
+                                const input = document.querySelector('input');
+                                input.addEventListener('select',selectevent);
+                                let checkName = () =>{
+                                var stdname = document.getElementById("name")
+                            if (stdname.value==""){
+                alert('name should not be empty');
+            stdname.style.border = '2px solid red'
+            return false
+        }
+
+                            
+            
+                        </script>
+                        </div>
+                        </form>
+        </div>
+    </body>
+</html>

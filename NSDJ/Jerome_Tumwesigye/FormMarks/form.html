@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Marks</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    
+    
+  </head>
+  <body style="margin: 0%;">
+  
+
+    <div
+      id="body-inheritance"
+      style="background-color: #ffff; width: 100%; height: 700px"
+    >
+      <header style="background-color: #009933 ; width: 100%; height: 50px">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 id="clerkInt">Clerk International University - CIU</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        id="appBody"
+        style="background-color: #ffff ; width:100%; height: auto"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 id="scoreBoard">Welcome to the score board.</h3>
+              <h4 style="color: #66b3ff">Our Vision For CIU</h4>
+              <p>A values-based university that inspires leadership, critical <br> thinking, innovation, and outstanding academic training that 
+                <br> transforms communities.</p>
+
+                <h4 style="color: #66b3ff">CIU's Mission</h4>
+
+                <p>To prepare students for global leadership and to be catalysts for transformation.
+
+                </p>
+                <p>We achieve this mission through a Values-Based Education; 
+                  <br> Instilling in students a zeal for Lifelong Learning; Outstanding 
+                  <br> Interdisciplinary Academic Training, Research and Community <br> Outreach; Innovative Action; and, Exceptional Faculty.
+                </p>
+
+
+            </div>
+            <div class="col-md-6" style="background-color: whitesmoke">
+              <form action="#" id="form">
+                <div>
+                  <p id="enter">
+                    Enter respective scores to obtain the final mark.
+                  </p>
+                  <br />
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4" style="padding-top: 17px">
+                        <label for="Test1"> <p id="ftest">First test</p> </label> <br>
+                        <label for="Test2"><p id="stest">Second Test</p> </label> <br>
+                        <label for="assignment"><p id="assgntText">Assignment</p> </label> <br>
+                        <label for="Exam"><p id="fexam">Final Exam</p> </label> <br>
+                      </div>
+                      <div class="col-md-8">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Test_1 mark"
+                          id="test1"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Test_2 mark"
+                          id="test2"
+                        />
+                        <input
+                          type="text"
+                          placeholder="assgnt mark"
+                          id="assgnt"
+                        />
+                        <input type="text" placeholder="Exam mark" id="exam" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                          <input type="reset" value="cancel" id="cancel">
+                         
+                      </div>
+                      <div class="col-md-8">
+                          <input type="button" value="Submit" id="btn">
+                      </div>
+
+                    </div>
+                    <p id="par"></p>
+               
+                  </div>
+
+                  
+                </div>
+               
+                <hr />
+                <div>
+                  <p>
+                    Please checkout the consolidated percentage module score
+                    below;
+                  </p>
+                 
+                  <span>
+                    <label for="module score"
+                      >The consolidated Module score:</label>
+                    <input
+                      type="text"
+                      name=""
+                      id="moduleScore"
+                      placeholder="Module score"
+                    />
+                  </span>
+                  <br />
+                </div>
+              </form> 
+              <p id="par"></p> 
+            </div>
+          </div>
+        </div>
+      </div> 
+      <footer style="background-color:#009933 ; width:100%; height: 40px;">
+        <div class="container">
+          <div class="row" >
+            <div class="col-md-12" id="copyRight">
+            <p>© Clarke International University. All Rights Reserved</p>
+          </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

@@ -108,7 +108,7 @@ var Manchester_city = new football_team("Manchester City","Pep Guardiola","Eders
 
 
 
-//---------------------------------------------------------FIFTH OBJECT  CREATION - COUNTRY OBJECT--------------------------------------------
+//------------------------------------------------FIFTH OBJECT  CREATION - COUNTRY OBJECT--------------------------------------------
 function country("name","continent", "president","capital_city","national_language","independence_date"){
     //object properties
     this.name = name
@@ -129,7 +129,7 @@ var Rwanda = new country("Rwanda","Africa","H.E Kagame Paul","Kigali","Rwandese"
 var USA = new vehicle("United States Of America","America","H.E Donald Trump","Washington D.C","English","4 July")
 var Italy = new vehicle("Italy","Europe","H.E Sergio Matarella","Rome","Italian","17 March")
 
-//--------------------------------------------------------SIXTH OBJECT  CREATION - SONG OBJECT---------------------------------------------
+//--------------------------------------------SIXTH OBJECT  CREATION - SONG OBJECT---------------------------------------------
 function vehicle("name","artist","album","genre","year_of_release","duration"){
     //object properties
     this.name = name

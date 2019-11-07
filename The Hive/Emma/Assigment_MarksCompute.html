@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOX MODEL</title>
+    <link rel="stylesheet" href="marks.css">
+
+</head>
+
+<body>
+
+    <div id="main_body">
+        <header id="header">
+            <h1>Mark Computer</h1>
+            Jo
+            <div>
+                <label for="student">Students first Name</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="First name">
+
+
+                <label for="student" class="hide-name"></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Last name">
+            </div>
+            
+        </header>
+        <div id="main_section">
+
+            <div id="boxes">
+                <div>
+                    <div class="box">
+
+                        <div>
+                            <h2 id="pop">Test 1</h2>
+
+                            <label id="popa" for="student"> </label><br><br>
+                            <input id="mic" type="text" class="form-control" placeholder="Test 1">
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <h2>Test 2</h2>
+                            <label for="student"> </label><br><br>
+                            <input id="mic2" type="text" class="form-control" placeholder="Test 2">
+                        </div>
+                    </div>
+
+                    <!-- First Submit button for Test 1 and Test 2 -->
+                    <div>
+                        
+        //Calling the functin of testMark on  click of the sumit button
+                        &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-success non" value="submit"
+                            onclick="testMark()">Submit</button>
+
+                        <!-- Print Out of Best of Test 1 and Test 2 -->
+                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <p id="printout" class="non"></p>
+                    </div>
+                </div>
+
+                <br>
+                <div class="box">
+
+                    <div>
+                        <h2>Examination</h2>
+                        <label for="student"></label><br><br>
+                        <input type="text" class="form-control" placeholder="exam" id="ex">
+                    </div>
+                </div>
+                <div class="box">
+                    <div>
+                        <h2>Course work</h2>
+
+                        <label for="student"></label><br><br>
+                        <input type="text" class="form-control" placeholder="Course work" id="courseW">
+                    </div>
+                </div>
+
+                <form class="btn">
+    
+          //calling the function exam() on a click of the submit button
+                    <button type="button" class="btn btn-success" value="submit" onclick="exam()">Submit</button>
+         
+          //inner html content space for printing out evoked function of the submit button  on click.
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <p id="display" class="non"></p>
+
+                    &nbsp; &nbsp; &nbsp;
+                    <!-- <div class="col-md-0"> -->
+                    <button type="submit" class="btn btn-danger">cancel</button>
+
+                </form>
+            </div>
+        </div>
+        <footer id="main-footer">
+
+            <p>Copyright@Refactory 2019</p>
+        </footer>
+    </div>
+
+    <script>
+        function testMark() {
+
+            var test1 = document.getElementById('mic')
+            var test2 = document.getElementById('mic2')
+            //Condition that prints out a reminder  if Test 1 and 2 values are empty
+            
+            if ((test1.value == '') && (test2.value == '')) {
+                document.getElementById("printout").innerHTML = '<h5>Please insert Marks for Test 1 and test 2' + '</h5>';
+            //if test1 mak is filled and test 2 mark is empty ,print please insert test 2 on console
+            } else if ((test1.value != '') && (test2.value == '')) {
+                document.getElementById("printout").innerHTML = '<h5>Please Insert Test 2 Mark' + '</h5>';
+            //if test 1 is empty and  test 2 is filled ,print please insert test two marks. 
+            } else if ((test1.value == '') && (test2.value != '')) {
+                document.getElementById("printout").innerHTML = '<h5>Please Insert Test 1 Mark' + '</h5>';
+            }
+            //if both test 2 and test 1 values are filled,Chose the best done of the two
+            else if ((test1.value != '') && (test2.value != '')) {
+                if (test1.value > test2.value) {
+                    document.getElementById("printout").innerHTML = '<h5>Highest Test Mark Score Is:  ' + test1.value + '</h5>';
+                } else {
+                    document.getElementById("printout").innerHTML = '<h5>Highest Test mark Score Is: ' + test2.value + '</h5>';
+                }
+            }
+        }
+
+
+        function exam() {
+
+            var exm = document.getElementById('ex')
+            var courseWork = document.getElementById('courseW')
+            //Condition that prints out a reminder  if Test 1 and 2 values are empty on the console
+            if ((exm.value == '') && (courseW.value == '')) {
+                document.getElementById("display").innerHTML = '<h5>Please Insert Coursework and Examination Marks' + '</h5>';
+           //if exam mark is filled and course work ark is empty print please insert course mark
+            } else if ((exm.value != '') && (courseW.value == '')) {
+                document.getElementById("display").innerHTML = '<h5>Please Insert Course Work Mark' + '</h5
+           //if  exam mark is empty and course work mark is filled print insert eam mark on the console
+            } else if ((exm.value == '') && (courseW.value != '')) {
+                document.getElementById("display").innerHTML = '<h5>Please Insert Test Examination Mark' + '</h5>';
+            }
+            //if both the course work and examination marks are filled print sucessfully entered examination and course mark
+            else if ((exm.value != '') && (courseWork.value != '')) {
+                if (test1.value > test2.value) {
+                    document.getElementById("display").innerHTML = '<h5>Sucessfully Entered Coursework and Examination Mark:  ';
+                } else {
+                    document.getElementById("display").innerHTML = '<h5>Are all the Marks filled In ' + '</h5>';
+                }
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Today's Date</title>
+    <!-- <script>
+        let d = new Date()
+        // alert("today is:" + Date.now)
+        document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
+    </script> -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<script>
+
+    function check() {
+        //create variables for all elements
+        var varName = document.getElementById('name')
+        // var test1 = document.getElementById('test1')
+        // var test2 = document.getElementById('test2')
+        // if (name.value == '' && test1.value == '' && test2.value == '')
+            // let elementvalue= name.value
+            if (varName.value == "") 
+            {
+                alert('name should be filled')
+                varName.style.border = '10px solid red'
+                // test1.style.border = '2px solid green'
+                // test2.style.border = '2px solid white'
+                //return false
+            }
+            else { alert("your name is " + varName.value) }
+    }
+    // document.getElementById("name").value;
+
+</script>
+
+</head>
+
+<body>
+
+    <!-- <script>
+        let d = new Date()
+        // alert("today is:" + Date.now)
+        document.body.innerHTML = "<h5>Today's date is " + d + "</h5>"
+    </script> -->
+
+    <!-- <form action="" method="" -->
+
+    <div class="container">
+        <form action="#">
+            <h1 style="text-decoration: underline;">please input your name:</h1><br>
+            <input type="text" name="name" id="name" placeholder="student's">
+            <span><input type="button" onclick="check()" value="Submit"></span><br><br>
+            <!-- <input type="button" onclick="check()" value="Submit"> -->
+        </form>
+
+    </div>
+</body>
+
+</html>

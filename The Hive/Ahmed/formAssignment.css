@@ -1,0 +1,53 @@
+.Popstyle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-color: bisque;
+    align-items: center;
+
+}
+
+#Popstyle2{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+.bodyCalling{
+    align-items: center;
+    
+}
+
+#header{
+    background-color: burlywood;
+    height: 80px;
+
+}
+
+.formAlign{
+    padding-left: 70px;
+    padding-top: 20px;
+    align-items: flex-end;
+}
+
+#fieldset{
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    height: fit-content;
+    border: 2px solid black);
+}
+
+.box{
+    display: block;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 70px;
+    padding-bottom: 25px;
+    color: black;
+}

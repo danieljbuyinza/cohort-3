@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marks</title>
+</head>
+<body>
+        <center><h1 style="color:red">Student Marks</h1></center><hr>
+        <div id="output">
+                
+        </div>
+        <style>
+         #output{
+                          
+             color:black;
+             border: 2px solid black;
+             position:center;
+             padding:20px;
+             margin-top: 100px;
+             background-color: #3D9970;
+             width: 75vh;
+             height: 25vh;
+             position: absolute;
+             left:30%;
+             margin-left: -50px;
+         }
+        </style>
+    <script type="text/javascript">
+        //prompting the user to enter their testOne marks
+        var testOne = prompt('Input marks for test1:')
+
+       //displaying testOne marks 
+        //document.write(` Test 1 = ${testOne}`);
+
+        //prompting the user to enter test 2 marks
+        var testTwo = prompt('Input marks for test2')
+
+        //dispalying testTwo marks
+        //document.write(` Test 2 = ${testTwo}`)
+
+        //converting the value from the enter test-marks prompts to integers and assigning to a variable to be used throughout
+        var test1= parseInt(testOne)
+        var test2=parseInt(testTwo)
+
+        /*----function that checks for the higher test mark----*/
+        
+        function checkTest(a,b){
+            var test1=a,test2=b
+           var highTest = (test1>test2)?test1:test2;
+            return highTest;
+            }
+
+           //placing the higher mark in an input field
+            //var d = document.getElementById('higherMark')
+            //d.value = checkTest(test1,test2)
+
+        //prompting user to enter coursework marks and storing the value to be output on the screen
+        var koswak = prompt('Enter coursework marks')
+
+        //document.write(`\t` + `Coursework = ${koswak}`)
+
+        //converting the input coursework mark to an integer 
+        var CW = parseInt(koswak)
+
+        /*-----Calculating the final coursework mark by adding coursework marks to higher test mark, divide by two
+            and then multiplying by 40%-------*/
+         function coursework(a,b,c){
+             let test1 = a
+             let test2 = b
+             let cw = c
+            let addMarks = (checkTest(test1,test2) + cw);
+            let avg = ((addMarks/2));
+            let finalCw = avg*(40/100);
+            return finalCw;
+        }
+       
+        // accessing the element with ID "cw"
+       // var e = document.getElementById('CW')
+        //assigning the value from the function coursework to the input field
+       // e.value = coursework(test1,test2,CW)
+
+
+        //prompting to get an exam mark which is output 
+        var exm = prompt('Enter exam marks')
+
+        //document.write(`\t` + `Exam = ${exm}`)
+
+        //converting the input exam mark to an integer 
+        var finalExam = parseInt(exm)
+
+        /*------Function that calculates the final mark by first multiplying the provided exam mark
+                by 60% and then add the final coursework mark -------*/
+
+        function EXAM(f,g,h,i){
+            
+            let test1 = f, test2 = g, cw = h, exmMark=i;
+            let calcExam = exmMark*(60/100);
+            let exmFinal = coursework(test1,test2,CW) + calcExam;
+           // console.log(`Final exam mark is ` +exmFinal);
+           return exmFinal;
+        }
+
+        // accessing the element with ID "output"
+        var c = document.getElementById('output')
+        //directing whatever is in the quotes to display into the div
+        c.textContent = `The final exam mark is ${EXAM(test1,test2,CW,finalExam)}`
+
+
+    </script>
+    
+</body>
+</html>

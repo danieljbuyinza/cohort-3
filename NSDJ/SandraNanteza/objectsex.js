@@ -17,6 +17,9 @@ loveme = new lipstick('loveme', 'nude', 'mac', 'liquid', 50000, 70000)
 frost = new lipstick('frost', 'red', 'maybelline', 'retro-matte', 20000, 25000)
 power = new lipstick('power', 'blue', 'huda', 'glossy', 7000, 10000)
 
+//this is to output lead lipstick
+console.log(lead.brand)
+
 //2. creating musicArtist as an object.
 function musicArtist(name, genre, country, age, gender, instfollowers) {
     //creating properties of a musicArtist
@@ -108,10 +111,10 @@ function man(name, race, heightCm, shirt, weightKg, nationality) {
     this.nationality = nationality
 }
 
-// creating different instances of  different men
-nicholas = new bag('nicholas', 'white', 150, 'medium', 75, 'american')
-patrick = new bag('patrick', 'black', 140, 'medium', 80, 'kenyan')
-jerome = new bag('jerome', 'black', 155, 'large', 70, 'ugandan')
-shayo = new bag('shayo', 'asian', 200, 'small', 65, 'chinese')
-emma = new bag('emma', 'asian', 170, 'xlarge', 88, 'indian')
-kevin = new bag('kevin', 'white', 90, 'large', 76, 'british')
+// creating different instances of  different men. 
+nicholas = new man('nicholas', 'white', 150, 'medium', 75, 'american')
+patrick = new man('patrick', 'black', 140, 'medium', 80, 'kenyan')
+jerome = new man('jerome', 'black', 155, 'large', 70, 'ugandan')
+shayo = new man('shayo', 'asian', 200, 'small', 65, 'chinese')
+emma = new man('emma', 'asian', 170, 'xlarge', 88, 'indian')
+kevin = new man('kevin', 'white', 90, 'large', 76, 'british')

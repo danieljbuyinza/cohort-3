@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <!-- Bootsrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./MarksForm/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        #maindiv{
+            margin-top: 150px;
+            border: 1px solid rgb(212, 206, 206);
+            border-radius: 1em;
+        }
+        body{
+            background-image: url("./images/bgimg5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        #heading{
+            color: #eb0a1e;
+        }
+        
+        
+       
+    </style>
+</head>
+<body >
+        <div class="container " >
+            <div class="row">
+                <div class="col"></div>
+                <div class="col bg-light text-dark  " id="maindiv">
+                    <h3 id="heading" > Toyota Login Page</h3>
+                    <form action="#" class="form1 w-75 pl-3">
+                        <div class="form-group pt-3  row">
+                            <label>Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group row">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                        <div class="pb-3 row">
+                            <button type="submit" class="btn btn-primary col-md-4 mr-5" onclick="check()">Submit</button>
+                            <button type="reset" class="btn btn-danger col-md-4 ml-4">Cancel</button>
+                        </div>
+                    </form>
+                    <p id="log" ></p>    
+                </div>
+                <div class="col"></div>
+            </div>
+              
+                
+            
+
+        </div>
+    
+    <script>
+    //A function that resets the form once it has been cancelled and print the timestamp
+    function logreset(e){
+        log.textContent = `form reset! time stamp: ${event.timeStamp}`;
+    }
+    const form = document.getElementsByTagName('form')
+    const log = document.getElementById('log')
+    form[0].addEventListener('reset', logreset)
+
+    //A function that checks whether username and password have been entered
+    function check() {
+        var username = document.getElementById('username')
+        var password = document.getElementById('password')
+        if (username.value == ""){
+            alert("Username is required")
+            username.style.border = "2px solid red";
+            return false;
+        }
+        if (password.value == ""){
+            alert("Password is required")
+            password.style.border = "2px solid red";
+            return false;
+        }
+    //A condition that checks if password and username after login
+        if(username.value != null && password.value != null){
+            alert('Your username is ' + username.value + '\n' + 'Your password is '+ password.value )
+        }
+
+    }
+    
+    
+
+   
+
+    //A function that alerts once a text once has been selected
+    function logselect(e){
+        const select = event.target.value.substring(
+            event.selectionstart,
+            event.selectionEnd
+        )
+        alert(`You selected username: ${select}`)
+    }
+    const input =  document.getElementById('username')
+    input.addEventListener('select', logselect)
+
+
+    </script>   
+    
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

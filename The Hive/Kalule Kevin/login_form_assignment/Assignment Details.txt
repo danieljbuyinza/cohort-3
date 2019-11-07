@@ -1,0 +1,14 @@
+/* 
+
+    create a div and style it
+    inside the div create a form with username, password and cancel (reset) and submit(login) button
+    
+    
+    listeners should 
+    give an alert showing what someone has typed and selected in the username text field
+    on clicking log in button - should alert the username that has been typed
+    all fields should not be empty, when empty field is tried to submit , an alert should showing
+    on clicking cancel button (reset form) , give the time of reset
+    
+
+*/

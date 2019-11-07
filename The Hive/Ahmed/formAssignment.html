@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exam Results Self Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="formAssignment.css">
+    
+</head>
+<body class="Popstyle">
+        
+    <header id="header">
+
+        <h1 id="Popstyle2">Exam Calculator</h1>
+    </header>
+    
+            
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                    <form class="form-inline">
+                            <div class="form-group mb-2">
+                              <label for="staticEmail2" class="sr-only">Email</label>
+                              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                              <label for="inputPassword2" class="sr-only">Password</label>
+                              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+                    </form>
+            </div>
+        
+        <div class = "box">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+
+                            <form action="#" class="form-check-inline" id="formAlign">
+                                    <fieldset>
+                                        <legend id="fieldset">Exam Grades</legend>
+                                        1st Test Result  <input type="text" name="Test_1" id="Test_1" placeholder="Marks"><br> 
+                                        2nd Test Result  <input type="text" name="Test_2" id="Test_2" placeholder="Marks"><br>
+                                       <br>
+                                       Course Work Mark <input type="text" name="CourseWork" id="Course_Marks" placeholder="Course Marks"><br> 
+                                       Main Exam Mark   <input type="text" name="Exam" id="Exam_Marks" placeholder="Exam Marks"><br>
+                                       <br>                                       
+                                       <input type="submit" name="Compute" value="Compute" onclick="run_calculation()">
+                                    </fieldset>
+                        
+                            </form>
+
+                            <p id="final_mark"></p>
+                    </div>
+                </div>
+            
+               
+            </div>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    <script>      
+    /*creating a funcion that will access the value of the elements in target, and assigning calculation protocol
+    for the system to follow when computing marks for the student  
+    */ 
+            function run_calculation (){
+                // console.log(test2)
+                //create variables for all the elements
+             var test2 = document.getElementById('Test_2').value
+            var test1 = document.getElementById('Test_1').value
+            var courseWork = document.getElementById('Course_Marks').value
+            var exam = document.getElementById('Exam_Marks').value 
+            // 'parseInt' function is meant to switch string functions from the prompt into numeric values that can be operationable
+            var test1 = parseInt(prompt("Enter Test 1 :"))
+            var test2 = parseInt(prompt("Enter Test 2 :"))
+            var courseWork = parseInt(prompt("Enter Coursework :"))
+            var exam = parseInt(prompt("Enter Exam :"))
+    
+            //  calling the result from the last function into an alert message to be displayed for the user
+                var finalMark = exm(test1, test2, courseWork,exam)  
+                alert('your final mark is:' + finalMark)
+
+                var final_mark_element = document.getElementById('final_mark')
+
+                final_mark_element.textContent = "The final mark is "+finalMark
+                    
+                    }
+// function instructs the system to verify that all the fields have been inputed first before any further operation takes place
+           function check(test1 , test2 , courseWork , exam){           
+            
+            if (test1 =='' || test2 =='' || courseWork == '' || exam == ''){
+                alert('field mark is empty!')
+                /* test1.style.border = '2px solid red'
+                test2.style.border = '2px solid red'
+                courseWork.style.border = '2px solid red'
+                exam.style.border = '2px solid red' */
+                return false;
+            }
+           }
+    
+// definition of mathematical operation function that computes the values of the test marks, course work marks & the exam mark  
+           function test(test1,test2){
+                    var testMark = (test1 > test2)? test1 : test2
+                    console.log(testMark)
+                    return testMark;
+                }
+                
+                function course(test1, test2, courseWork){
+                    let sumMark = (test(test1,test2) + courseWork) / 2                
+                    let sumPcnt = sumMark * (40 / 100)
+                    console.log(sumPcnt)
+                    return sumPcnt;
+                }
+    
+                function exm(test1, test2, courseWork,exam){
+                    //check(test1, test2, courseWork , exam)
+    
+                    let exmPcnt = exam * (60 / 100)
+                    let results = (exmPcnt + course(test1, test2,courseWork))
+                    console.log(exmPcnt)
+                    console.log(results)
+                        return results;
+                
+                }
+    
+               
+        </script>
+</body>
+</html>

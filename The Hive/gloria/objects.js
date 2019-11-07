@@ -2,12 +2,14 @@
 /the code below will take objects of cars 
 */
 function car(price,name,years,place,about,good)
-//the properties are as below
+    /*this is used for creating a property of an object and assigning them to their meaning
+as seen below
+the properties are as below*/
 {
     this.good=good
     this.about=about
     this.price=price
-    this.place=place //this is used for creating a property of an object and assigning them to their meaning
+    this.place=place 
     this.name=name
     this.years=years
 }

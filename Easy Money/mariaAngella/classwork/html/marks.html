@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.css">
+   
+   
+    <title>Refactory Cohort003</title>
+    <header style="background-color:#45619d; width:100%; height: 82px; border-bottom:1px solid #133783;">              
+<h1>
+   Refactory Cohort003 Final Results
+</h1>  
+    </header>
+
+    <script>
+        
+        function check(){
+//create variables for all elements
+    var name = document.getElementById("name")
+    var test1 = document.getElementById("test1")
+    var test2 = document.getElementById("test2")
+    var courseWork = document.getElementById("courseWork")
+    var exam = document.getElementById("exam")
+    if (name.value == "" && test1.value ==""  && test2.value ==""){
+        alert("name should not be empty")
+        name.style.border = "2px solid red"
+        test1.style.border = "2px solid red"
+        test2.style.border = "2px solid red"
+        courseWork.style.border = "2px solid red"
+        exam.style.border = "2px solid red"
+        return false
+    }
+
+}
+    
+    </script>
+</head>
+<body style="background-color: #edf0f5;width: 100%;margin: 0px;">         
+<br><br>
+                    
+<form action="#">
+  Name of Student:
+  <input type="text" name="name" id ="name" placeholder="Student's Name">
+  <br><br>
+  Test 1:<br>
+  <input id="test1" name="test1" type="number">
+  <br><br>
+  Test 2:<br>
+  <input id="test2" name="test2" type="number">
+  <br><br>
+  Course Work:<br>
+  <input id="courseWork" name="courseWork" type="number">
+  <br><br>
+  Exam:<br>
+  <input id="exam" name="exam" type="number">
+  <br> <br>
+  Final Mark:<br>
+  <output id="finalMark" name="finalMark" type="number">
+</form>
+
+<footer style="background-color: #fff; width:100%; height:90px;  position:fixed; bottom:0;">
+<button class="btn btn-success" style="width: 200px;background-color: #45619d;" onclick="check()">Submit</button>
+</footer>
+    
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js">
+    </script>
+    <script src="form.js">
+    </script>
+</body>
+</html>
+

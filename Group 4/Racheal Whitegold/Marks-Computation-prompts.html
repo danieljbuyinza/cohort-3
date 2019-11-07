@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marks Computation Form</title>
+</head>
+
+<body>
+    <h1>FeedBack</h1>
+    <script>
+        message = 'Application to compute student marks\n Please Press Ok to Continue'
+        // math = 98
+        x = confirm(message)
+        if (x == true) {
+            // alert('you have clicked on OK button')
+            var testEvaluetor = () => {
+                var test1_input = prompt('welcome \n Please enter your test one mark :')
+                var test1 = parseInt(test1_input)
+
+                var test2_input = prompt('thank you \n Please enter your test two mark :')
+                var test2 = parseInt(test2_input)
+
+                var bestTestMark = (test1 > test2 ? test1 : test2);
+                console.log(bestTestMark);
+                return bestTestMark;
+            }
+
+            var averageTotal = () => {
+                var bestTestMark = testEvaluetor()
+
+                var coursework_input = prompt('welcome \n Please enter your course work mark :')
+                var coursework = parseInt(coursework_input)
+
+                var testandCoursework = (bestTestMark + coursework);
+
+                var average_testandCoursework = (testandCoursework / 2);
+                var total_testandCoursework = (average_testandCoursework * (40 / 100));
+                console.log(total_testandCoursework);
+
+                return total_testandCoursework;
+            };
+
+
+            var finalTotal = () => {
+                var total_testandCoursework = averageTotal()
+
+                var exam_input = prompt('thank you \n Please enter your exam mark :')
+                var exam = parseInt(exam_input)
+
+                let examMark = exam * (60 / 100);
+                let finalMark = (examMark + total_testandCoursework);
+                console.log(finalMark);
+                return finalMark;
+            };
+            var finalMark = finalTotal();
+
+            alert('welldone \n The Final Mark is :', finalMark, '%')
+        } else {
+            alert('you  have clicked on cancel button')
+            alert('try again later')
+
+        } 
+    </script>
+</body>
+
+</html>

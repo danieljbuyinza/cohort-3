@@ -5,12 +5,12 @@
 /**
  * This is an object called book with the following instances
  *
- * @param {Book title} title
- * @param {Name of author} author
- * @param {Total number of pages} pages
- * @param {International Standard Book Number} isbn
- * @param {book edition} edition
- * @param {the date it was released} releaseDate
+ * @param {string} title - Book title
+ * @param {string} author - Name of author
+ * @param {string} pages - Total number of pages
+ * @param {string} isbn - International Standard Book Number
+ * @param {string} edition - Book edition
+ * @param {number} releaseDate -The date it was released
  */
 function book(title, author, pages, isbn, edition, releaseDate) {
   this.title = title;
@@ -66,18 +66,18 @@ let javaScript = new book(
   "529pages",
   "978-0-071-80938-2",
   "4th Edition ",
-  "April 2013"
+  2013
 );
 
 /**
  * This is an object called vehicle with the following instances
  *
- * @param {the person who manufactured the vehicle } manufacturer
- * @param {color of vehicle} color
- * @param {the vehicle type should either be Left Hand Drive or Right Hand Drive} type
- * @param {the vehicle's top speed} speed
- * @param {number seater in the vehicle} seaters
- * @param {price of the vehicle on the market} price
+ * @param {string} manufacturer -The person who manufactured the vehicle
+ * @param {string} color - Color of vehicle
+ * @param {string} type - The vehicle type should either be Left Hand Drive or Right Hand Drive
+ * @param {string} speed - The vehicle's top speed
+ * @param {string} seaters - Number seater in the vehicle
+ * @param {string} price - Price of the vehicle on the market
  */
 function vehicle(manufacturer, color, type, speed, seaters, price) {
   this.manufacturer = manufacturer;
@@ -98,12 +98,12 @@ console.log(benz.color);
 
 /**
  * This is an object called school with the following instances
- * @param {name of the school} name
- * @param {level of education the school holds} level
- * @param {number of class rooms} classroom
- * @param {total number of students a school holds} students
- * @param {total number of teachers a school holds} teachers
- * @param {where the school is located} location
+ * @param {string} name - name of the school
+ * @param {string} level - level of education the school holds
+ * @param {string} classroom - number of class rooms
+ * @param {string} students - total number of students a school holds
+ * @param {string} teachers - total number of teachers a school holds
+ * @param {string} location - where the school is located
  */
 function school(name, level, classroom, students, teachers, location) {
   this.name = name;
@@ -165,12 +165,12 @@ let goodHope = new school(
 /**
  * This is an object called country with the following instances
  *
- * @param {name of country} name
- * @param {continent of the country} continent
- * @param {nation language} language
- * @param {what the country citizens are called} citizen
- * @param {country currency} currency
- * @param {name of president} president
+ * @param {string} name - name of country
+ * @param {string} continent - continent of the country
+ * @param {string} language -national language
+ * @param {string} citizen - what the country citizens are called
+ * @param {string} currency - country currency
+ * @param {string} president - name of president
  */
 function country(name, continent, language, citizen, currency, president) {
   this.name = name;
@@ -218,12 +218,12 @@ let germany = country(
 /**
  * This is an object called phone with the following instances
  *
- * @param {name of the phone} name
- * @param {brand of the phone} brand
- * @param {software version} version
- * @param {screen size} screenSize
- * @param {weight of the phone} weight
- * @param {size of random access memory} memory
+ * @param {string} name - name of the phone
+ * @param {string} brand - brand of the phone
+ * @param {string} version - software version
+ * @param {string} screenSize - screen size
+ * @param {string} weight - weight of the phone
+ * @param {string} memory - size of random access memory
  */
 function phone(name, brand, version, screenSize, weight, memory) {
   this.name = name;
@@ -278,12 +278,12 @@ let motorolla = phone(
 /**
  * This is an object called film with the following instances
  *
- * @param {title of the movie} title
- * @param {the time take watching} duration
- * @param {the movie director} director
- * @param {the movie producer} producer
- * @param {boolean in case the movie has a copyright} copyright
- * @param {catergory of the movie} genre
+ * @param {string} title - title of the movie
+ * @param {string} duration - the time take watching
+ * @param {string} director - the movie director
+ * @param {string} producer - the movie producer
+ * @param {string} copyright - boolean in case the movie has a copyright
+ * @param {string} genre - catergory of the movie
  */
 function film(title, duration, director, producer, copyright, genre) {
   this.title = title;

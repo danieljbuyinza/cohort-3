@@ -1,0 +1,209 @@
+body {
+  padding: 0% 0% 5% 0%;
+  
+  margin: 0 auto;
+  -webkit-perspective : 1000;
+  -webkit-backface-visibility : hidden;
+  
+}
+.title {
+    font-size: 180%;
+    padding: 5%;
+    font-family: Roboto,Monserrat,Verdana,Open Sans, sans-serif;
+}
+
+.info-block {
+
+  font-size: 110%;
+  color: lightslategray;
+  margin: 0% 10%;
+  font-family: sans-serif,open sans, Times New Roman;
+}
+ 
+.help-block {
+
+  color: lightslategray;
+  font-size: 80%;
+  font-family: cursive, comic sans;
+}
+
+.content{
+        
+    margin: 5% 0% 0% 15%;
+   /* background-color:slategray;*/
+    
+    }
+
+.right_column{
+    border: 15px solid #7c0a43; 
+    padding: 4.5%;
+    
+    border-radius:5%;
+    }
+
+.left_column{
+    border: 15px solid #7c0a43; 
+    padding: 3.5%;
+    margin-right: -1%;
+    
+    border-radius:5%;
+        
+    }
+.search_form .form-control {
+    
+    border: 3px solid #ced4da;
+}
+
+.search_form label {
+
+    font-family: Times New Roman,Verdana,sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+/* STYLES FOR THE MARKS FORM WITH PROMPTS */
+
+#prompt_body {
+    
+        background-color: #e5e5e5; /* lightcyan, #dcdcdc - lightgrey , #f5f5f5-whiteish , #e5e5e5 ,lightgoldenrodyellow */
+    
+    }
+    
+.prompt_content {
+    
+         margin: 18% 0% 0% 15%;
+         /*border: 2px solid red; */
+         font-family : Verdana , Roboto, Geneva;
+    }
+    
+    .prompt_content h1 {
+            text-align : center;
+            font-family : Roboto, Geneva;
+            font-weight : bold;
+        }
+        
+        .marks_output {
+                
+            margin: -35% 5% 0 5%;
+            z-index: 1;
+            position: relative;
+            padding : 2% 2%;
+            border : 2px solid #7c0a43; /* 5a99d4 3f3f3f #dcdcdc */
+            background-color : #e0c1d7;
+            border-radius : 1em;
+            
+            }
+        
+        .marks_output h2 {
+            
+                text-align : center;
+                padding : 2% 0%;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        
+    h5 {
+        
+        font-family: Geneva , Century;
+        font-size : 130%;
+        text-decoration : underline;
+        font-weight: bold;
+        }
+    
+    .input p , 
+    .output p {
+            
+            font-family: Consolas , Courier New;
+            font-size: 125%;
+            padding-left: 20%;
+            
+        }
+        
+     .input p span , 
+    .output p span {
+        
+            font-size: 135%;
+            font-family: Arial,Consolas , Century;
+            font-weight: bold;
+            padding-left: 5%;
+            
+        }
+        
+    .final_mark {
+        
+        padding: 2% 0%;
+        font-size: 130%;       
+        }
+        
+    .final_mark span {
+        
+        font-weight : bold;
+         font-size : 128%;        
+        }
+    
+    
+    /*styles for the pulse button */
+    
+    .pulse-button {
+        
+    /* position: relative; */
+    /* top: 0%; */
+    /* left: 0%; */
+    /*  */
+    margin: 0 0 0 40%;
+    display: block;
+    width: 120px;
+    height: 120px;
+    font-size: 1.3em;
+    font-weight: light;
+    font-family: 'Trebuchet Ms', sans-serif;
+    text-transform: uppercase;
+    /* text-align: center; */
+    line-height: 115px;
+    /* letter-spacing: -1px; */
+    color: white;
+    border: white;
+    border-radius: 50%;
+    background: #7c0a43;
+        cursor:pointer;
+        box-shadow:0 0 0 0 rgba(77, 6, 67, 0.5);
+        -webkit-animation: pulse 1.5s infinite;       
+        
+        }
+        
+    .pulse-button:hover {
+            
+            -webkit-animation: none;
+        }
+
+/* defining the webkit animation properties */
+    
+    @-webkit-keyframes pulse{
+            
+            0% {
+                    -moz-transform: scale(0.9);
+                    -ms-transform: scale(0.9);
+                    -webkit-transform: scale(0.9);
+                    transform: scale(0.9);
+
+                    box-shadow: 0 0 0 50px rgba(124, 10, 67  , 0.5);
+                }
+                
+            70% {
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    
+                    box-shadow: 0 0 0 15px rgba(124, 10, 67 , 0);
+                }
+                
+            100% {
+                   -moz-transform: scale(0.9);
+                    -ms-transform: scale(0.9);
+                    -webkit-transform: scale(0.9);
+                    transform: scale(0.9);
+                    
+                    box-shadow: 0 0 0 0 rgba(124, 10, 67  , 0);
+                }
+        }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exam Calculator</title>
+</head>
+<body>
+    <h1 style="color: black;">Exam Feedback</h1>
+    <script type="text/javascript">
+
+/* creating a prompt message box that takes in the figures of student marks, computes the values and provides logical
+results to the values inputed */
+         message = 'Please Enter Your Marks'        
+        x = confirm(message)
+        if (x == true){
+// use of parseInt function to help switch the content value from string to numeric format for computation
+
+            var test1 = parseInt(prompt('Input your Test 1 mark:'))
+            var test2 = parseInt(prompt('Input your Test 2 mark'))
+            var crsMark = parseInt(prompt('Input your Coursework mark'))
+            var exam = parseInt(prompt('Input your Exam mark'))
+
+            function test(test1,test2){
+                let testMark = (test1>test2)?test1:test2
+                return testMark
+            }
+            
+            function course(crsMark){
+                let sumMark = ((test(test1,test2)) + crsMark) / 2                
+                let sumPcnt = sumMark * (40 / 100)
+                return sumPcnt;
+            }
+
+            function exm(exam){
+                exmPcnt = exam * (60 / 100)
+                results = exmPcnt + (course(crsMark))
+                    return results;
+            
+            }
+// calling of function and ouputting result from the operation into alert dialogue box
+                   var finalMark = exm(exam)  
+            alert('your final mark is:' + finalMark)
+        } 
+        else{
+            alert('You have clicked on Cancel button')
+        }
+        </script>
+</body>
+</html>

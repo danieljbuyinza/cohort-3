@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        header {
+            color: white;}
+
+        .box {border: 8px solid rgb(255, 255, 255); 
+            background-color: rgb(218, 201, 170);
+            border-radius: 15px;
+            max-width: 300px;
+            margin: 0px auto;        
+            height: 280px;
+            display: block;
+            padding-left: 80px;
+            font-size: 16px;
+            font-family: Tahoma;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .input {
+            border: 4px solid white;
+            border-radius: 3px;
+            padding: 7px 30px;
+        }
+
+        #loginbtn {
+            border-radius: 5px;
+            padding: 9px 25px;
+            background-color: white;
+            color: gray;
+            background-image: linear-gradient(rgb(218, 201, 170), white, rgb(218, 201, 170));
+            border: 1px solid white
+        }
+        #cancelbtn {
+            border-radius: 5px;
+            padding: 9px 25px;
+            background-color: white;
+            color: gray;
+            background-image: linear-gradient(rgb(218, 201, 170), white, rgb(218, 201, 170));
+            border: 1px solid white
+        }
+        .large{
+            transform:scale(1.3)
+        }
+       
+        footer{
+            background-color:rgb(218, 201, 170);;
+            padding: 20px;
+            color: rgb(110, 102, 102);
+            text-align: center;
+            font-weight: bold;
+            
+           
+        }
+        #login{
+            color:white;
+            padding-left: 60px;
+
+        }
+        #log{
+            text-align: center;
+            color:gray;
+            max-width: 360px;
+            margin: 0px auto;
+            padding: 10px 
+        }
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toyata Uganda</title>
+</head>
+
+<body>
+    <header>
+        <h1>TOYOTASPARE SALES</h1>
+    </header>
+    <br><br><br>
+    <form >
+        <div class="box">
+            <br><br>
+            <h2 id="login">Log In</h2>
+            <br>
+            <div>
+
+                <!-- <label for="username" >Enter Username</label><br><br> -->
+                <input type="text" placeholder="Enter Username" class="input" id="user"  value="">
+               
+
+
+            </div>
+            <br><br>
+
+            <div>
+                <!-- <label for="password">Enter Password</label><br><br> -->
+                <input type="password" class="input" placeholder="Enter Password" id="pass">
+                <br><br>
+            </div>
+            <br>
+            <div>
+                <button id="loginbtn" onclick="check()">Log In</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <button id="cancelbtn" type="reset">Cancle</button>
+                
+              
+            </div>
+           <br><br>
+        </div>
+
+          <br><br>
+       <p id="log"></p>
+    </form> 
+    
+
+    <script>
+        /*Function that prints out time of Reset time:  
+        Decalaring function LogReset*/
+        function logReset(event) {
+        /* Prints in the html document in the element with id log the 
+        event of time stamp*/
+            log.textContent = `form reset! time stamp:${event.timeStamp}`
+        }
+        /*Using the getElementById method to access elements in the html
+        with the id log*/
+        const log = document.getElementById('log')
+
+        /*Using the getElementByTagName to access elements with form tag
+        in the html*/
+        const form = document.getElementsByTagName('form')
+        form[0].addEventListener('reset', logReset)
+
+         //ALERT IN CASE INPUT FILLS ARE EMPTY:
+
+         //Declaration of function check.
+                function check(){
+         /*Using the getElememtById method to access the element in the
+         html document with id user and pass respectively*/           
+                var username = document.getElementById('user')
+                var passname = document.getElementById('pass')   
+        /*Assigning a condition for the alert event to input fills */            
+                if (username.value =='' && passname.value == ''){
+                    alert('Please enter Your  Username and Password')
+                 
+                }else if(username.value !=='' && passname.value == ''){
+                    alert('Please enter Your Password')
+                }
+                else if(username.value =='' && passname.value !== ''){
+                    alert('Please enter Your Username')
+                }
+            }
+        //FUNCTION THAT PERFORMS THE TOGGLE EFFECT WHEN WEBPAGE CLICK
+
+        /*creating a variable rank and using the querySector to access
+        elements with an id,tagName form*/
+        const rank = document.querySelector('form')
+
+        /*using event handler addEventListener to execute the two arguments 
+        of an event and the function*/   
+        rank.addEventListener('dblclick',function(e){
+        rank.classList.toggle('large')
+   })
+        //EVENT LISTENER THAT ALERTS TEXT ENTERED INTO THE INPUT BOXES:
+
+        function logselect(event){
+        //Accesing element with id user from the html document
+        const log = document.getElementById('user')
+
+        const select = event.target.value.substring(
+        event.target.selectionStart, event.target.selectionEnd
+        )
+        alert(`You selected:  ${select}`) 
+     
+       /*querySector method to select element from the html document with 
+       attribute id with value inpu; Adding event listener select and calling the 
+       fuction log select*/
+        }
+        const input = document.querySelector('input');
+        input.addEventListener('select',logselect)
+
+        
+    </script>
+
+<br><br><br><br><br><br><br><br>
+<footer>
+    <div ><p id="tot">Toyata Uganda Limited 2019</p></div>
+</footer>
+</body>
+
+</html>

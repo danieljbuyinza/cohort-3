@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+     <!--local Bootstrap link-->
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+     <!--customised css link-->
+    <link rel="stylesheet" href="bootstrap/css/myCss.css"/>
+    <!--Logo in the title-->
+    <link rel="icon"  type="image/png" href="images/toyotaLogo.png">
+</head>
+<body class="container bg d-flex justify-content-center align-items-center loginBody">
+            <div class="row">
+                
+            <form  class="form-group loginForm" name="marksForm" action="#">
+                <center><h1>LOGIN</h1></center>
+                <div class="row">
+
+                    <div class="col-md-12">
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                            <br><p id='log'></p>
+                    </div>
+
+                </div><br>
+                   
+                    
+                <div class="footer">
+                    <center>
+                    <!--calling the check function on clicking the login button-->
+                    <button type="submit" class="btn btn-dark" onclick="check()">Login</button>
+                    <!--Resetting the form on clicking the reset button-->
+                    <button type="reset" id="recet" class="btn btn-primary" onclick="formReset()">Reset</button>
+                    </center>
+
+                </div>
+        </form>  
+    </div>
+
+
+
+        <style>
+            .bg{
+            /*=====making the bg dim======*/
+            background: linear-gradient( rgba(216, 216, 231, 0.9), rgba(216, 216, 231, 0.9) , rgba(216, 216, 231, 0.9) );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            opacity:2;
+        }
+        /*making the login form background darker*/
+        .loginForm{
+            background: linear-gradient( rgba(69, 69, 71, 0.4), rgba(69, 69, 71, 0.9) , rgba(69, 69, 71, 0.9) ),url('images/toyotaLogo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            opacity:2;
+        }
+
+            </style>
+       <!--JQuery first then popper then bootstrap-->
+       <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+       <script src="bootstrap/js/popper.min.js"></script>
+       <script src="bootstrap/js/bootstrap.min.js"></script>
+       <script src="bootstrap/js/login.js"></script>
+</body>
+</html>

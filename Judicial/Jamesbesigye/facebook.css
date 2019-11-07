@@ -1,0 +1,79 @@
+.body-wrap{
+    height: 700px;
+    width: 1400px;
+    background-color: #e9ebee;
+}
+.header-set{
+    height: 100px;
+    width: 1400px;
+    background-color: #3f5d9a;
+}
+.title{
+    font-size: 25px;
+    color: #ffffff;
+    float: left;
+    padding-top: 5px;
+}
+.w-labels{
+    color: #ffffff;
+}
+.pass-label{
+    color: #ffffff;
+    padding-left: 80px;
+    /*border-spacing: 5px;*/
+}
+.bodyspan {
+    display: inline-block;
+  }
+.Leftwing {
+    margin-top: 14px;
+    padding-bottom: 10px;
+  }
+  
+  .Icon {
+    vertical-align: middle;
+    margin-right: 16px;
+  }
+  .photospan {
+    font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .span-up {
+    color: #666;
+    font-size: 15px;
+    line-height: 20px;
+  }
+.name{
+    margin-top: 40px;
+}
+.signup-header{
+    margin-top: 20px;
+}
+.gender{
+    display: flex;
+    padding: 10px;
+    border-spacing: 10px;
+}
+.h2-leftspace {
+    font-family: "Freight Sans Bold", Helvetica, Arial, sans-serif !important;
+    font-weight: bold !important;
+    letter-spacing: normal;
+    text-rendering: optimizelegibility;
+    color: #333;
+    padding: 42px 0 24px;
+    font-size: 28px;
+    line-height: 36px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .leftbody {
+    margin-top: 14px;
+    padding-bottom: 10px;
+  }

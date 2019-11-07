@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate grades</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=NTR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="calculate-grades.js"></script>
+    <script>
+        /* Highlight if the fields are empty */
+        function checkForEmptyFields() {
+            if (studentName.value == "" && test1.value == "" && test2.value == "" && theCoursework.value == "" && theExam.value == "") {
+                studentName.style.border = "2px solid red"
+                test1.style.border = "2px solid red"
+                test2.style.border = "2px solid red"
+                theCoursework.style.border = "2px solid red"
+                theExam.style.border = "2px solid red"
+            }
+            return false
+        }
+    </script>
+    <script>
+        /* Calculate the combined results from Test 1, Test2, the coursework, and the exam */
+        function calculateResults() {
+            var name = document.getElementById('studentName')
+            var test1 = document.getElementById('test1')
+            var test2 = document.getElementById('test2')
+            var coursework = document.getElementById('theCoursework')
+            var exam = document.getElementById('theExam')
+
+            /* Should display the student's name together with their results */
+            if (name.value != "") {
+                document.getElementById('student').innerHTML = name.value
+            }
+            document.getElementById('value').innerHTML = examination(exam.value) // Calling the examination() function from calculate-grades.js file
+            return false
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Calculate the student's grades</h2>
+                <p>A collection of the results from two tests, coursework, and the exam</p>
+
+                <br>
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-3">Student's name <input type="text" id="studentName"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">Test 1 <input type="number" min="0" max="100" id="test1"></div>
+                        <div class="col-md-3">Test 2 <input type="number" min="0" max="100" id="test2"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">Coursework <input type="number" min="0" max="100" id="theCoursework"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">The Exam <input type="number" min="0" max="100" id="theExam"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6"><button type="button" onclick="checkForEmptyFields(); calculateResults()">Calculate results</button></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="results">
+                    <h4><span id="student">Student</span>'s final result is</h4>
+                    <p id="the-percentage"><span id="value">0</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

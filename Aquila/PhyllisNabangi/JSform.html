@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final Mark Form</title>
+    
+    <!--Bootsrap-->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./form.css">
+       
+</head>
+<body>
+        <div class="container maindiv">
+            <h2>Final Mark Calculator</h2>
+            <div class="row tablediv ">
+                <div class="col-md-12 fnt">
+                  
+                    <table class="table table-borderless pt-5">
+                        <tbody>
+                          <tr class="row pt-4 px-5">
+                              <th class="col-md-3">Test1</th>
+                              <td><input type="number" class="form-control ml-3" id="test1"  placeholder="Enter Test1 mark"></td>
+                          </tr> 
+
+                          <tr class="row px-5">
+                            <th class="col-md-3">Test2</th>
+                            <td><input type="number" class="form-control ml-3" id="test2"  placeholder="Enter Test2 mark"></td>
+                          </tr> 
+
+                          <tr class="row px-5">
+                            <th class="col-md-3">Coursework</th>
+                            <td><input type="number" class="form-control ml-3" id="coursework"  placeholder="Enter Coursework mark"></td>
+                          </tr> 
+                            
+                          <tr class="row px-5">
+                            <th class="col-md-3">Exam</th>
+                            <td ><input type="number" class="form-control ml-3" id="exam"  placeholder="Enter Exam mark"></td>
+                          </tr> 
+                          <tr class="row px-5">
+                            <td><button type="submit" onclick="check()" class="btn btn-primary fnt button">Final Mark</button> </td>
+                          </tr>
+            
+                        </tbody>
+                    </table>
+                  
+                </div>
+            </div>
+
+        </div>
+    <!-- JavaScript -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        
+      let check = () =>
+      { 
+        var Test1 = document.getElementById("test1")
+        var Test2 = document.getElementById("test2")
+        var Coursework = document.getElementById("coursework")
+        var Exam = document.getElementById("exam")
+          if(Test1.value=='')
+          {
+              alert(`Test1 should not be empty`);
+              Test1.style.border =  '2px solid red'
+              return false
+          }
+          if(Test2.value=='')
+          {
+            alert(`Test2 should not be empty`);
+            Test2.style.border =  '2px solid red'
+          }
+          if(Coursework.value=='' )
+          {
+            alert(`Fill in Coursework mark`);
+            Coursework.style.border =  '2px solid red';
+          }
+          if(Exam.value=='')
+          {
+            alert(`Exam mark is required`);
+            Exam.style.border =  '2px solid red';
+          }
+      }
+
+  </script>
+</body>
+</html>

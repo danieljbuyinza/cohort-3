@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate grades using prompts</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=NTR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        function receiveResults() {
+            var studentName = prompt("Input the student's name: ")
+            if (studentName != null && studentName != "") {
+                alert("Their name is: " + studentName) // Display the entered name
+
+                var test1 = prompt("Enter their Test 1 results: ")
+                var test2 = prompt("Enter their Test 2 results: ")
+                var theCoursework = prompt("Enter their Coursework results: ")
+                var theExam = prompt("Enter their Exam results: ")
+
+                /* Compare to determine the greater of the two marks */
+                let check = (a, b) => {
+                    if (a > b) {
+                        return a
+                    } else {
+                        return b
+                    }
+                }
+
+                /* Calculating the coursework */
+                let classCoursework = (course) => {
+                    let d = (check(test1, test2) + course) / 2
+                    let f = d * (40/100)
+                    return f
+                }
+
+                /* Calculating the final results including those of the exam */
+                let examination = (ex) => {
+                    let y = ex * (60/100)
+                    let results = y + classCoursework(theCoursework)
+                    return results
+                }
+
+                student.textContent = `${studentName}`
+                value.textContent = `${examination(theExam)}`
+            } else {
+                receiveResults() // Re-call this function to enforce that the user should enter the student's name 
+            }
+        }
+    </script>
+    <div class="container">
+        <br><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Calculate the student's grades</h2>
+                <p>A collection of the results from two tests, coursework, and the exam</p>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6"><button type="submit" onclick="receiveResults()">Let's begin</button></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="results">
+                    <h4><span id="student">Student</span>'s final result is</h4>
+                    <p id="the-percentage"><span id="value">0</span>%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

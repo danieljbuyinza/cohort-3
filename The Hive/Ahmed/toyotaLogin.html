@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toyota Log In</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="toyota.css">
+    <link rel="stylesheet" href="toyota.jpg">
+    <script>
+       
+    </script>
+
+</head>
+<body id="bckground">    
+    <div class="body">
+        <header class="header">
+            <h1>
+                Toyota Uganda Customer Log In
+            </h1>
+        </header>
+    </div>
+    <div class="bigDiv" >
+            <div class="outerDiv">
+                    <form action="#">
+                        <div class="container">
+                            <div class="row">
+                                    <div style="font-size: 30px; font-weight: bolder;">
+                                        Email Address
+                                 
+                                        <input class="fieldStyle" id="display1" type="text" id="staticEmail2" id="check1" placeholder="email@name.com">
+                                    </div>
+                                    <p id="log1" style="font-weight: bold;"></p>
+                            </div>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+                            <div class="row">
+                                    <div style="font-size: 30px; font-weight: bolder;">
+                                        Password
+                                        
+                                        <input class="fieldStyle" id="display" type="password" id="inputPassword2" placeholder="Password">
+                                    </div>
+                            </div>
+                        </div> 
+                        <br>
+                        <div><br>
+                            <div>
+                                
+                                        <input style="color: rgb(17, 17, 17); font-weight: bold; background-color: blue;"  type="submit" class="button1" value="Log In" onclick="check()">   &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                                   
+                                
+                                          
+                        
+                                
+                                        <input style="color: rgb(14, 13, 13); font-weight: bold; background-color: aquamarine;" id="displayButton" class="button1" type="Reset" value="Cancel"> 
+                                
+                            </div>                        
+                            <p id="log" style="font-weight: bold;"></p>
+                        </div>  
+                        
+                            
+                    </form>
+            </div>
+    </div>
+    
+    <script>
+/*first object defines an event handler for resetting the form.
+        it entails acquiring elements from the form and describing what response
+        the page should display*/
+
+            function logReset(event){
+                log.textContent = `Form Reset! time Stamp:  ${event.timeStamp}`
+            }
+            const form = document.getElementsByTagName('form')
+            const log = document.getElementById('log')
+
+ //this second process illustrates accessing the actual element to be oriented and setting a listener to the tag
+    
+            form[0].addEventListener('reset', logReset)
+
+/*second object seeks to define an event handler that elaborates a response from the system
+        when text inside a field has been highlighted, as well as identifying where the response message
+        <paragraph> can be sent to */
+
+            function logSelect(event){
+                const log = document.getElementById('log1')
+                const select = event.target.value.substring(event.target.selectionStart,event.target.selectionEnd)
+                log.textContent = `You selected:  ${select}`
+            }
+        
+//this second process accesses the element through a query selector and invokes the event listener to the <input> tag
+            const input = document.querySelector('input');
+            input.addEventListener('select', logSelect)
+
+//alert function
+
+function check(){
+
+var email = document.getElementById('display1')
+var password = document.getElementById('display')
+
+if (email.value != '' && password.value != ''){
+ 
+    alert('You have logged in with:\t' + email.value ,  password.value)
+    
+    return true
+} else{
+                           
+    alert('Please fill the blank spaces')
+
+    display1.style.border = '2px solid red'
+    display.style.border = '2px solid red'
+}
+
+}
+    </script>
+    
+</body>
+</html>

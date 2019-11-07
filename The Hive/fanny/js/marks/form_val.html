@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        CREATE A LOGIN FORM/PAGE,LOGIN &PASSWORD || ONCLICK LOGIN- GET AN ALERT "USERNAME"
+        ONCLICK CANCEL-CANCEL || IF FIELD ARE LEFT EMPTY-ALERT--"PLEASE FILL THE FIELDS"
+        ON CURSOR ON USERNAME--ALERT "YOU SELECTED " || RESET FORM WITH TIME OF RESET
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM VALIDATION</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .box{
+            align-content: center;
+            padding-left: 40%;
+            padding-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form id="login_form" action="#">
+                <h4 id="caller"></h4>
+            <h2>LOGIN</h2>
+            <label for="username">USERNAME: 
+                <input id="username" class="form-control txt" type="text" placeholder="Enter name"> 
+            </label><br><br>
+            <label for="password">PASSWORD: 
+                <input id="password" class="form-control txt" type="password" placeholder="Enter password"> 
+            </label><br><br>
+            <input class="btn btn-info" type="submit" onclick="validate()" value="LOGIN">
+            <input class="btn btn-outline-info" type="reset" value="RESET">
+        </form>
+        <br><br>
+        
+    </div>
+
+
+
+
+
+    <script>
+        const demoQueryAll = document .querySelectorAll('.txt')
+        demoQueryAll.forEach(
+        query=>  {
+        query.style.border = '1px solid blue'
+        });
+    
+            //function that triggers a time stamp once the clear button is pressed
+        function callerReset(event){
+            log.textContent = `You reset the form! time Stamp: ${event.timeStamp}`
+        }
+        //accessing dom elements and we set a listener to form tag
+        const form = document.getElementById('login_form');
+        const log = document.getElementById('caller');
+        form.addEventListener ('reset', callerReset);
+     
+    //function that triggers the selector to output an alert of the selected input on the screen
+    function logselect(event){
+       const select = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd
+        )
+    //  highlighted text in the input boxes output in an alert box
+        alert(`You selected: ${select}`) 
+       }
+       
+       const input = document.querySelector('input');
+       input.addEventListener('select',logselect)
+        </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

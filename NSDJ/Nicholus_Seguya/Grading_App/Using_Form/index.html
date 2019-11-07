@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Marks App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="header-logo">Grading App</div>
+                </div>
+                <div class="col-md-5">
+                    <form action="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-7">
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="app-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section-left">
+                        <h2>Input Section</h2>
+                        <div class="form-input">
+                            <form action="#">
+                                <div class="form-group">
+                                    <label class="label">Please Input Student's Name</label>
+                                    <input type="text" class="form-control" id="txt-name" placeholder="Student's Name">
+                                </div>
+                                <div class="row">
+                                    <br>
+                                    <div class="col">
+                                        <label class="label">First Test</label>
+                                        <input type="number" class="form-control" placeholder="First Test" id="txt-test1">
+                                    </div>
+                                    <div class="col">
+                                        <label class="label">Second Test</label>
+                                        <input type="number" class="form-control" placeholder="Second Test" id="txt-test2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <br>
+                                    <label class="label">Corse Work</label>
+                                    <input type="number" class="form-control" id="txt-course" placeholder="Corse Work Mark">
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Exam</label>
+                                    <input type="number" class="form-control" id="txt-exam" placeholder="Exam Mark">
+                                </div>
+                                <button type="submit" class="compute" id="btn-submit" onclick="check_name()">Compute</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="section-right">
+                        <h2>Output Section</h2>
+                        <div class="form-output">
+                            <form>
+                                <fieldset>
+                                    <legend class="label">Your Results are :</legend>
+                                    <p id="stud_name"></p>
+                                    <p id="t1"></p>
+                                    <p id="cos_40"></p>
+                                    <p id="cos_60"></p>
+                                    <p id="exa"></p>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+
+    <script type="text/javascript" src="js/style.js"></script>
+
+</body>
+
+</html>

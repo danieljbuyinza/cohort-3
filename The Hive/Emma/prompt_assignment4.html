@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: rgb(11, 11, 51);
+        }
+
+        .display {
+            width: 200px;
+            height: 200px;
+            background: rgb(137, 137, 156);
+            border-radius: 5px;
+            color: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0px auto;
+            box-shadow: 45px
+        }
+
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <br><br><br>
+    <div class="display">
+        <p id="name"></p>
+        <p id="final"></p>
+
+    </div>
+
+
+    <script>
+        // Promting Students name
+        var student = prompt('Students Name')
+        //Promting Test one input
+        var test1 = prompt('Input Test 1')
+        //Promting Test Two input
+        var test2 = prompt('Input Test 2')
+        //Converting values of test1 and test 2 to intergers.
+        var t1 = parseInt(test1)
+        var t2 = parseInt(test2)
+        //Best test mark.
+        function bestTest(x, y) {
+            var t1 = x, t2 = y
+            var highestMark = (t1 > t2) ? t1 : t2;
+            return highestMark
+        }
+        //Promting course work
+        var cos = prompt('Enter course work mark')
+        //converting course work to an interger
+        var coswork = parseInt(cos)
+        //Declaring a function coursework with three parameters a,b,c.
+        function coursework(a, b, c) {
+            let t1 = a
+            let t2 = b
+            let cw = c
+            /*Creating a variable add marks
+            Calling the function best test and adding it to 
+            coursework mark*/
+            let addMarks = (bestTest(t1, t2) + cw);
+            let avg = ((addMarks / 2));
+            let finalCosWork = avg * (40 / 100)
+            return finalCosWork
+        }
+
+        var exam = prompt('Enter exam mark')
+        var finalExam = parseInt(exam)
+
+        function EXAM(f, g, h, i) {
+            let t1 = f, t2 = g, cw = h, examMark = i;
+            let calcExam = examMark * (60 / 100);
+            let examFinal = coursework(t1, t2, coswork) + calcExam;
+            return examFinal
+        }
+        //Accesing the element with id display
+        // var z = document.write(`The final exam mark is  ${EXAM(t1,t2,coswork,finalExam)} `)
+
+        document.getElementById('name').innerHTML = "Student's Name : " + student
+        document.getElementById('final').innerHTML = `The Final Exam Mark is  ${EXAM(t1, t2, coswork, finalExam)} `
+
+
+
+    </script>
+</body>
+
+</html>

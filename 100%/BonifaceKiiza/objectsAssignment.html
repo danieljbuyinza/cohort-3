@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/css/custom.css">
+  <title>Bootstrap 4 Login form</title>
+</head>
+<!-- creating a login form-->
+
+<body>
+  <!--This is a div in which everything will be included-->
+  <div id="log-form">
+    <!-- This is just class-login-->
+    <form class="form-login">
+      <!--below is a heading one which holds the word "Login" that is on top of the page-->
+      <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+      <!---->
+      <label for="inputEmail" class="sr-only">Username</label>
+      <input type="UserName" id="userName" class="form-control" placeholder="username" required autofocus><br>
+      <label for="inputPassword" class="sr-only ">Password</label>
+      <input type="password" id="userPassword" class="form-control" placeholder="Password" required><br>
+
+      <button type="button" class="btn btn-primary" value="submit" onclick="checkInput()">Login</button>
+
+      <button type="button" class="btn btn-primary" value="submit" style="float:center;"
+        onclick="logReset(event)">Cancel</button><br>
+    </form>
+  </div><br>
+  <p class="container" id="log" style="text-align: center;"></p>
+
+
+  <!-- login checking-->
+  <script>
+    function checkInput() {
+      var usernameCheck = document.getElementById('userName')
+      var passwordCheck = document.getElementById('userPassword')
+
+      if (usernameCheck.value == '' && passwordCheck.value == '') {
+        alert('please enter your user name and password')
+      } else if (usernameCheck.value != '' && passwordCheck.value == '') {
+        alert('please enter your  password')
+      } else if (usernameCheck.value == '' && passwordCheck.value != '') {
+        alert('please enter your  username first')
+      } else {
+        alert('your username is ' + usernameCheck.value + ' and your password is ' + passwordCheck.value)
+      }
+    }
+  </script>
+  <!--end of login checking-->
+
+  <!-- this is for cancel button-->
+  <script>
+    function logReset(event) {
+      log.textContent = `Form reset! time Stamp: ${event.timeStamp}`
+    }
+    const form = document.querySelector('form')
+    const log = document.getElementById('log')
+    form.addEventListener('button', logReset)
+  </script>
+  <!-- end of cancel button-->
+
+  <!-- username select-->
+
+
+</body>
+
+</html>

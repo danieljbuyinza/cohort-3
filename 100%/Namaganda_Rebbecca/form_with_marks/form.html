@@ -1,0 +1,171 @@
+<!--Javascript can access the html elements, make inputs-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/form.css" />
+    <!--load fontawesome icons -->
+    <link href="icons/css/all.css" rel="stylesheet"> 
+    <script>
+
+      
+      /*function check checks whether firstname has been entered on submission*/
+      function check(){
+       
+       var name =  document.getElementById('firstname');
+       var lname =  document.getElementById('lastname');
+       var test1 =  document.getElementById('test1');
+       var test2 =  document.getElementById('test2');
+       var cw =  document.getElementById('courseWork');
+       var exam = document.getElementById('examMark')
+     
+       //if all fields are empty
+       if (name.value=='' && lname.value=='' && test1.value=='' && test2.value=='' && cw.value=='' && exam.value=='')
+       {
+         alert('Fill in the blank spaces');
+         name.style.border = '2px solid red';//redden the border of firstname element with missing value
+         //return false; //dont execute anything unless this is true 
+         lname.style.border = '2px solid red';//if lastname is empty, redden the border
+         test1.style.border = '2px solid red';//if test1 is empty, redden the border
+         test2.style.border = '2px solid red';//if test2 is empty, redden the border
+         cw.style.border = '2px solid red';//if coursework is empty, redden the border
+         exam.style.border = '2px solid red';
+
+       }
+       else if(name.value=='' || lname.value=='' || test1.value=='' || test2.value=='' || cw.value=='' || exam.value==''){
+         alert('Sorry, cant calculate with empty blanks');
+       }  
+            /*
+       //if only firstname is empty
+       else if(name.value=='' && lname.value!=='' && test1.value!=='' && test2.value!=='' && cw.value!=='' && exam.value!==''){
+         alert('Please input first name')
+         name.style.border = '2px solid red';
+       }
+       
+       //if only last name is empty
+       else if(name.value!=='' && lname.value=='' && test1.value!=='' && test2.value!=='' && cw.value!=='' && exam.value!==''){
+        alert('Please input last name')
+        lname.style.border = '2px solid red';
+       }
+       
+       //if only test1 is empty
+       else if(name.value!=='' && lname.value==!'' && test1.value=='' && test2.value!=='' && cw.value!=='' && exam.value!==''){
+        alert('Please input marks for test1')
+        test1.style.border = '2px solid red';
+       }
+       
+       //if only test2 is empty
+       else if(name.value!=='' && lname.value==!'' && test1.value!=='' && test2.value=='' && cw.value!=='' && exam.value!==''){
+        alert('Please input marks for test2')
+        test2.style.border = '2px solid red';
+       }
+
+       //if only coursework is empty
+       else if(name.value!=='' && lname.value==!'' && test1.value!=='' && test2.value==!'' && cw.value=='' && exam.value!==''){
+        alert('Please input marks for coursework')
+        cw.style.border = '2px solid red';
+       }
+
+       //if only exam is empty
+       else if(name.value!=='' && lname.value==!'' && test1.value!=='' && test2.value==!'' && cw.value!=='' && exam.value==''){
+        alert('Please input marks for exam')
+        exam.style.border = '2px solid red';
+       }*/
+      }
+
+
+      /*----CALCULATING THE MARKS-----*/
+      /*var doneTest1 = prompt('Input marks for test 1')//prompting the user to enter their name
+      if(doneTest1!= null && doneTest1 !=""){
+          alert("Your name is: "+visitorName)
+      }else
+      alert("blank name......!")*/
+    </script>
+</head>
+<body class="container bg d-flex justify-content-center align-items-center">
+   <!--form with inputs-->
+        <form  class="form-group examForm" name="marksForm" action="#">
+                <h1>Get Exam Mark</h1>
+            <div class="row">
+
+                <div class="col-md-6">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First name">
+
+                        <label for="test1">Test 1:</label>
+                        <input type="number" name="test1" id="test1" class="form-control" placeholder="Test 1">
+
+                        <label for="courseWork">Coursework:</label>
+                        <input type="number" id="courseWork" name="courseWork" class="form-control" placeholder="Coursework">
+
+                </div>
+
+                <div class="col-md-6">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id = "lastname" name="lastname" class="form-control" placeholder="Last name">
+
+                        
+                        <label for="test2">Test 2:</label>
+                        <input type="number" name="test2" id="test2" class="form-control" placeholder="Test 2">
+
+                        
+                        <label for="examMark">Exam Mark:</label>
+                        <input type="number" name="examMark" id="examMark" class="form-control" placeholder="Exam mark">
+                </div>
+
+            </div>
+                
+                <label for="finalMark">Final Mark:</label>
+                <input type="number" name="finalMark" class="form-control" placeholder="Final score"><br>
+            
+            </div>
+            <div class="footer">
+              //submit button
+                <button type="submit" class="btn btn-outline-danger" onclick="check()">Calculate</button>
+                //reset button
+                <button type="button" class="btn btn-outline-primary">Reset</button>
+        
+            </div>
+        </form>  
+
+
+
+        <style>
+        .bg{
+        /*=====making the bg dim======*/
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5) ),url('images/booksBg.jpg');
+   
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        opacity:2;
+       }
+
+        </style>
+
+    <!-- Optional JavaScript for adding marks-->
+    <script src="bootstrap/js/form.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>  
+</body>
+</html>

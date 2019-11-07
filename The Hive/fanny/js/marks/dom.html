@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>date today</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--external ss-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    
+   
+
+</head>
+<body>
+   <!--DEMONSTRATING EVENT HANDLING IN JS-->
+   <h1>Accessing Elements in DOM</h1>
+   <h2>ID (#demo)</h2>
+   <div id="demo">Access me by Id</div>
+   <div class="demo">Access me by class (1)</div>
+
+       <div class="demo">Access me by class (2)</div>
+       <!--CREATING ARTICLES TAG-->
+       <h2>Tag (articles)</h2>
+       <article>Access me by tag (1)</article>
+       <article>Access me by tag (2)</article>
+
+       <h2>Query selector</h2>
+
+           <div id="demo-query" class=""></div>
+
+           <!--DEMONSTRATING QUERY SELECTORS-->
+           <h2>Query selector all</h2>
+
+           <div class="demo-query-all">Access me by query all (1)</div>
+           <div class="demo-query-all">Access me by query all (2)</div>
+           
+               <div>
+                    <form action="#">
+
+                            <label for="first">First name</label>
+                            <input type="text" class="form-control">
+         
+                            <label for="last">Last name</label>
+                            <input type="text" class="form-control">
+         
+                            <input type="submit" class="btn btn-primary" value="Send">
+                            <input type="reset" class="btn btn-danger" value="Reset">
+                        </form>
+
+               </div>
+          
+    
+<!--JS PROGRAM TO SHOW CURRENT TIME-->
+    <!--script>
+        let d = new Date();
+        //alert("The date today is:\t" +Date.now);
+        document.body.innerHTML = "<h3>Today's date is " +d+ "</h3>";//written in body b'se typeof is html body
+    </script-->
+    <!--JS-->
+    <script type="text/javascript" src="./js/access.js"></script>
+</body>
+</html>

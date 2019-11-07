@@ -1,0 +1,17 @@
+
+body, html{
+   height:100vh;
+    width:100%;
+    }
+    .dropdown:hover>.dropdown-menu {
+                   display: block;
+                    }
+
+  
+       /*--the form-*/
+       .examForm{
+           background-color: rgb(216, 216, 231);
+           padding:20px;
+           
+       }
+
