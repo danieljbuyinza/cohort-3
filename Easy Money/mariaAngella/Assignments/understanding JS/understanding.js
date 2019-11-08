@@ -375,7 +375,7 @@ console.log(patrick.age);
  /*object constructor-----create what looks like you 
  .....start functon name with small letter  
  .......this.----turns the function into a constructor*/
- function car(carModel, carSpeed, carColor, carFuelType, carBrand) {
+/*  function car(carModel, carSpeed, carColor, carFuelType, carBrand) {
    this.model = carModel;
    this.speed = carSpeed;
    this.color = carColor;
@@ -388,7 +388,7 @@ const bmw = new car(2017, 280, "black", "diesel", "bmw");
 console.log(myford)
 console.log(bmw.color);
 console.log(myford.brand);
-
+ */
 
 
 
@@ -399,3 +399,17 @@ all phones share the following specifications in common
 3. color
 4. battery life
 category which is either 'smart' or 'other' */
+
+ function phone(phoneBrand, phoneModel, phoneColor, phoneBatterylife) {
+   this.brand = phoneBrand;
+   this.model = phoneModel;
+   this.color = phoneColor;
+   this.batterylife = phoneBatterylife;
+   
+ }
+ //now use the constructor to create objects------create an instance object that behaves(new) like the constructor
+ const iphone = new phone("iphone", "2019", "blue", "long");
+ const techno = new phone("techno", "2018", "green", "short");
+ console.log(iphone);
+ console.log(techno.color);
+ console.log(techno.brand);
