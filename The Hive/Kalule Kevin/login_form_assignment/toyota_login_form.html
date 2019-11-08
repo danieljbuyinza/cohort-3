@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> TOYOTA LOG-IN </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome/css/all.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
+
+
+</head>
+
+<body>
+
+<header class="toyota-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-toyota">
+        <a class="navbar-brand" href="toyota_login_form.html" style="width:35%"> 
+            <img src="images/toyota_emblem.jpg" alt = "Toyota Logo" title="TOYOTA LOGO" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Back Home </a> <!-- <span class="sr-only">(current)</span> ->
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"> Log Lost Item </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Log Found Item </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <a href="#" class="btn btn-outline-success my-2 my-sm-0"> Point Of Access </a>
+            </div>
+        </div> -->
+        <div class="welcome_title"> WELCOME TO TOYOTA </div>
+    </nav>
+
+    </header>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-8 main_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="alert_content alert-success" id="alert_content"> </span>
+                            <br/>
+                            <span class="alert_content alert-info" id="reset_content"> </span>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-md-4 col-4 login_section">
+
+                <div class="container login_section_content">
+                        <h2> LOG IN </h2>
+
+                        <form class="form login-form" action="#" >
+                            <div class="image">
+                             <img src="images/toyota-logo(small).png" alt="TOYOTA LOGO" />
+                            </div>
+
+                            <div class="form-group">
+                            
+                                <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control">
+                            
+                            </div>
+
+                            <div class="form-group">
+                                
+                                <input type="password" name="username" id="password" placeholder="Enter Password" class="form-control">
+                            
+                            </div>
+
+                            <div class="form-group">
+                                <span class="text-left">
+                                    <button type="submit" id="login_button" class="btn btn-md btn-login"> LOG IN </button>
+                                </span>
+
+                                <span class="pl-5">
+                                    <button type="reset" id="reset_button" class="btn btn-md btn-login" > RESET </button>
+                                </span>
+
+                            </div>
+                        </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src='js/jquery-3.3.1.slim.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+
+    <script type="text/javascript">
+        
+        //paragraphs where the content shall display
+        var alert_content = document.getElementById('alert_content');
+        var reset_content = document.getElementById('reset_content');
+        
+        alert_content.style.display= 'none';
+        reset_content.style.display = 'none';
+
+        //input field items
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        
+        //the form and form button elements
+        var login_button = document.getElementById('login_button');
+        var reset_button = document.getElementById('reset_button');
+        var form = document.querySelector('form');
+
+        //login button press submit event handler
+        function login_listener(event){
+
+            //if one of the fields is empty
+            if(username.value == '' || password.value == ''){
+
+                alert("Please Fill All Fields");
+
+                //change border colour of username input field if it is empty
+                if(username.value == ''){
+                    username.style.border = '2px solid #f70d1a';
+                }
+
+                //change border colour of password input field if it is empty
+                if(password.value == ''){ 
+
+                    password.style.border = '2px solid #f70d1a';
+                }
+
+                                
+            
+            }else{
+
+                alert("Username is "+username.value+" and Password is "+password.value);
+            }
+        }
+
+        //adding the event listener to the login button
+            login_button.addEventListener('click', login_listener)
+
+        //username select event handler
+        function select_listener(event){
+
+            const select = event.target.value.substring(
+
+                event.selectionStart, event.target.selectionEnd
+            )
+
+            //show the content div
+             alert_content.style.display = 'block';
+
+            //what content should be displayed
+             alert_content.innerHTML = "You Selected: <strong>" + select+"</strong>"
+
+        }
+
+        //adding the event listener to the username field
+        username.addEventListener('select', select_listener)
+
+        form.addEventListener('reset' , function(e){
+
+            //show the content div
+            reset_content.style.display = 'block';
+
+            //what content should be displayed
+            reset_content.textContent = `You have reset the form at ${e.timeStamp}`
+        });
+
+    </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@ body {
 header {
   width: 100%;
   height: 82px;
-  background-color: transparent;
+  background: rgba(51, 51, 51, 0.8);
 }
 
 .header-logo {
@@ -102,4 +102,16 @@ img {
   margin-right: auto;
   max-width: 85px;
   height: 85px;
+}
+
+
+footer{
+  display: block;
+
+}
+
+p{
+  padding-top: 15px;
+  color:#fff;
+  text-align: center;
 }

@@ -1,0 +1,101 @@
+body{
+  background-color: #4d2600;
+}
+h1{
+  color: white;
+  font-size: 40px;
+  margin-left: 400px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+h2{
+  margin-left: 280px; 
+  color: #b35900; 
+  font-size: 35px; 
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  margin-left: 5px;
+  align-content: center;
+}
+.div1 {
+  background-color: #faf8f5;
+  height: 260px;
+  width: 450px;
+  font-size: 2.0rem;
+  color: black; 
+  padding: 0px;
+  padding-left: 90px;
+  
+  border-radius: 20px;
+  display: inline-block; 
+  margin-left: 400px;
+  
+  padding-bottom: 250px;
+  padding-top: 0px;
+  margin-top: 20px;
+}
+
+/* 
+#formdiv {
+ 
+  font-size: 2.2rem;
+  color: black;
+  margin-left: 70px;
+
+} */
+
+#userName {
+  height: 40px;
+  width: 300px;
+  color: black;
+  /* font-weight: bold; */
+  border-radius: 5px; 
+  font-size: 14px;
+  padding-left: 20px;
+  border-color: 1px solid #d9d9d9;
+}
+#passwd {
+  height: 40px;
+  width: 300px;
+  color: black;
+  /* font-weight: bolder; */
+  font-size: 14px; 
+  border-radius: 5px; 
+  padding-left: 20px;
+  border-color:  1px solid #d9d9d9;
+ 
+}
+#logbtn{
+  background-color:  #ff9933; 
+  border-color: white;
+  color:white;
+  padding: 12px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 8px
+}
+#logbtn:hover{
+  background-color: #e67300;
+}
+
+#cnlbtn{
+  
+  border: none;
+  color: black;
+  padding: 11px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: transparent;
+
+  
+  border: 2px solid #b35900;
+}
+#cnlbtn:hover{
+  background-color:  #ffe6cc;
+}

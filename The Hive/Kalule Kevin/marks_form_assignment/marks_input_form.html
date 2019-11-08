@@ -11,9 +11,28 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/fontawesome/css/all.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
 
+
 </head>
 
 <body>
+
+<script type="text/javascript">
+    function check(entered_id){
+            
+    var name = document.getElementById(entered_id)
+    
+    if(name.value == ''){
+        name.style.border='2px solid red'
+            alert("Should not be empty")             
+           // return false;
+            
+        }else {
+            
+            alert("The student's name is "+name.value);
+            }
+    }
+   
+</script>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <a class="navbar-brand text-white" href="#"> ACADEMIA </a>
@@ -63,7 +82,7 @@
             <div class="col-lg-5 col-sm-12 right_column"> 
                     <div class="search_form">
 
-            <form class="form" action="" method="">
+            <form class="form" action="#">
                <!--  <div class="row">
                     <div class="col-md-4 col-12 form-group">
                         <div class="row">
@@ -86,10 +105,22 @@
                     </div>
                 </div> -->
                 <div class="row">
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <div class="form-group">
+                            <label class="" for="student_name"> STUDENT NAME:</label>
+                            <input type="type" class="form-control" id="student_name" name="student_name" placeholder="Student's Name.........." />
+
+                            <div class="help-block">
+                                Name of the Student
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-6 col-sm-6 col-6">
                         <div class="form-group">
                             <label class="" for="test1"> TEST 1 MARK:</label>
-                            <input type="number" class="form-control" name="test1" placeholder="Test 1" />
+                            <input type="number" min = 0 class="form-control" id="test1" name="test1" placeholder="Test 1" />
 
                             <div class="help-block">
                                 Student's Test One Score
@@ -99,7 +130,7 @@
                     <div class="col-md-6 col-sm-6 col-6">
                          <div class="form-group">
                             <label class="" for="test2"> TEST 2 MARK:</label>
-                            <input type="number" class="form-control" name="test2" placeholder="Test 2" />
+                            <input type="number" min = 0 class="form-control" id="test2" name="test2" placeholder="Test 2" />
 
                             <div class="help-block">
                                 Student's Test Two Score
@@ -112,7 +143,7 @@
                     <div class="col-md-6 col-sm-6 col-6">
                        <div class="form-group">
                             <label class="" for="coursework_mark"> COURSEWORK MARK:</label>
-                            <input type="number" class="form-control" name="coursework_mark" placeholder="Coursework" />
+                            <input type="number" min = 0 class="form-control" id="coursework_mark" name="coursework_mark" placeholder="Coursework" />
 
                             <div class="help-block">
                                 Student's Coursework Score
@@ -123,7 +154,7 @@
                      <div class="col-md-6 col-sm-6 col-6">
                        <div class="form-group">
                             <label class="" for="exam_mark"> EXAM MARK:</label>
-                            <input type="number" class="form-control" name="exam_mark" placeholder="Exam Mark" />
+                            <input type="number"min = 0 class="form-control" id="exam_mark" name="exam_mark" placeholder="Exam Mark" />
 
                             <div class="help-block">
                                 Student's Exam Mark
@@ -136,7 +167,7 @@
                 <div class = "row">
                      <div class="col-md-12 col-sm-12 col-4">
                         <!-- <input type="submit" class="btn btn-md btn-primary search_button" value="SEARCH" name="search_button"/> -->
-                        <button href="#" class="btn btn-md btn-primary float-right" title="COMPUTE FINAL MARK">
+                        <button href="#" class="btn btn-md btn-primary float-right" title="COMPUTE FINAL MARK" onclick="check('student_name')">
                             Compute
                         </button>
                     </div>
