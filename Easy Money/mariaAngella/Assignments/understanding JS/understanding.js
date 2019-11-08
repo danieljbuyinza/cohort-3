@@ -392,6 +392,8 @@ console.log(myford.brand);
 
 
 
+
+
 /* you are hired by the government of uganda to design a factory system that generates mobile phones and render them market ready.
 all phones share the following specifications in common
 1. Brand
@@ -400,16 +402,259 @@ all phones share the following specifications in common
 4. battery life
 category which is either 'smart' or 'other' */
 
- function phone(phoneBrand, phoneModel, phoneColor, phoneBatterylife) {
-   this.brand = phoneBrand;
-   this.model = phoneModel;
-   this.color = phoneColor;
-   this.batterylife = phoneBatterylife;
-   
+/* use factory------------not usually used
+below is the reason
+ */
+/* var mystring = "this is a string"
+// var myString1 = string("this is also a string") //brings errors coz string is not defined
+var myString2 = new string("this is also another string")
+console.log(typeof myString2) */
+
+/* constructor advantage over factory
+1. access to object is easy
+2. easily make changes */
+
+
+
+ /* function Phone(phoneBrand, phoneModel, phoneColor, phoneBatterylife) {
+   return {
+  brand: phoneBrand,
+   model: phoneModel,
+   color: phoneColor,
+   batterylife: phoneBatterylife,
+   };
+ }
+let iphone = Phone("iphone", "2019", "blue", "long");
+let techno = Phone("techno", "2018", "green", "short");
+console.log(iphone);
+
+console.log("\n");
+
+console.log(techno.color);
+console.log(techno.brand);
+
+
+
+
+
+ //using constructor 
+ function bag(bagname, bagtype, bagcolor, bagsize, bagdurability, bagmanufacturer) {
+   this.name = bagname;
+   this.type = bagtype;
+   this.color = bagcolor;
+   this.size = bagsize;
+   this.durability = bagdurability;
+   this.manufacturer = bagmanufacturer;
  }
  //now use the constructor to create objects------create an instance object that behaves(new) like the constructor
- const iphone = new phone("iphone", "2019", "blue", "long");
- const techno = new phone("techno", "2018", "green", "short");
- console.log(iphone);
- console.log(techno.color);
- console.log(techno.brand);
+var backpack = new bag("menbackpack", "leather", "any", "central", "big", "uganda")
+var handbag = new bag("womenhandbag", "leather", "any", "central", "big", "uganda")
+
+ console.log(backpack);
+ console.log("\n");
+ console.log(handbag.name);
+ console.log(handbag.color);
+ */
+
+
+/* to correct values using . notation in a constructor */
+/* function person(givenName){
+  this.name = givenName
+}
+
+let patrick = new person("Patrickkk")
+console.log(patrick.name)
+
+patrick.name = "Patrick" // can easily correct the value after the constructor above
+console.log(patrick.name); */
+
+/* to instantiate later */
+/* function person(){
+  this.name = undefined
+}
+
+let patrick = new person()
+
+
+patrick.name = "Patrick" // giving/instantiating the name later in the code
+console.log(patrick.name);
+
+ */
+
+
+/* to instantiate later using the bracket notation----------bracket notation is very powerfull than the dot. notation but dot. notation adv is that it is very easy to use */
+/* function person(){
+  this.name = undefined
+}
+
+let patrick = new person()
+
+
+patrick["name"] = "Patrick" // giving/instantiating the name later in the code
+console.log(patrick["name"]);
+console.log(patrick.name); */
+
+
+
+
+/* class is a modified constructor 
+Diff btn the following: 
+properties(attributes) and methods(behaviour)----- property is a value stored in the hash key(describes the characteristics of an object), whereas method is a function stored in hash key(how the characterizes behave--e.g how a person eats).
+attributes and behaviour-------attributes refers to additional information of an object*/
+
+/* class Person{
+  constructor(){
+    this.name = "maria";
+    this.age = "29";
+  }
+  //implement behaviour here
+  digest = function () {
+    console.log("I'm digesting")
+  }
+  talk(){
+    console.log("I'm talking");
+  }
+  walk(){
+    console.log("I'm walking");
+  }
+}
+ */
+
+/* for many objects or persons use below */
+/* class Person {
+  //put properties in the constructor
+  constructor(givenName, givenAge) {
+    this.name = givenName;
+    this.age = givenAge;
+  }
+  //implement behaviour/methods here in the class
+  digest() {
+    console.log("I'm digesting");
+  };
+  talk() {
+    console.log("I'm talking");
+  }
+  walk() {
+    console.log("I'm walking");
+  }
+}
+
+let sandra = new Person("sandraNantume", "30");
+console.log(sandra)
+console.log(sandra.age);
+//public display using this for constructor but in a class, use the object.  ----so to get the methods public, do the following
+console.log(sandra.walk())
+//console is an object and log is a method----just like sandra is an object and walk is a method
+sandra.walk();
+ */
+
+
+
+
+
+
+/* 4 objects and their behaviours/methods using class
+ */
+//one
+class Phone {
+  
+  constructor(phoneName, phoneAge) {
+    this.pname = phoneName;
+    this.page = phoneAge;
+  }
+  
+  charge() {
+    console.log("I'm charging");
+  }
+  text() {
+    console.log("I'm texting");
+  }
+  calling() {
+    console.log("I'm calling");
+  }
+}
+
+let tecno = new Phone("mytechno", "30");
+console.log(tecno);
+tecno.charge();
+
+
+
+
+
+//two
+class Cow {
+  
+  constructor(cowName, cowAge) {
+    this.cname = cowName;
+    this.cage = cowAge;
+  }
+  
+  digest() {
+    console.log("I'm digesting");
+  }
+  moo() {
+    console.log("I'm mooing");
+  }
+  sit() {
+    console.log("I'm sitting");
+  }
+}
+
+let indegenous = new Cow("indegenouscow", "3");
+console.log(indegenous);
+indegenous.moo();
+
+
+
+
+
+
+//three
+class Vehicle {
+  constructor(vehicleName, vehicleAge) {
+    this.vname = vehicleName;
+    this.vage = vehicleAge;
+  }
+
+  fuel() {
+    console.log("I'm fueling");
+  }
+  park() {
+    console.log("I'm parking");
+  }
+  repair() {
+    console.log("I'm repairing");
+  }
+}
+
+let benz = new Vehicle("bmw", "13");
+console.log(benz);
+benz.park();
+
+
+
+
+
+//four
+class Laptop {
+  
+  constructor(lapName, LapAge) {
+    this.lname = lapName;
+    this.lage = LapAge;
+  }
+  
+  charge() {
+    console.log("I'm charging");
+  }
+  boot() {
+    console.log("I'm booting");
+  }
+  reboot() {
+    console.log("I'm rebooting");
+  }
+}
+
+let toshiba = new Laptop("toshibasmall", "33");
+console.log(toshiba);
+toshiba.boot();
