@@ -3,66 +3,47 @@
 
 <head>
     <title>Document</title>
-    <style>
-        .parent {
-            background-color: rgb(111, 111, 219);
-            height: 650px;
-            overflow: hidden;
-        }
-
-        .mid {
-            background-color: rgb(120, 162, 240);
-            height: 550px;
-            width: 400px;
-            margin-top: 85px;
-            margin-left: 400px;
-            border-top-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-
-        }
-
-        form {
-            padding: 50px;
-        }
-
-        #textbox {
-            border-block-end-color: rgb(250, 91, 176);
-            width: 170px;
-            height: 22px;
-            border-radius: 6px;
-        }
-
-        #field {
-            border-block-end-color: rgb(250, 91, 176);
-            width: 170px;
-            height: 70px;
-            border-radius: 5px;
-        }
-
-        #radio {
-
-        }
-
-    </style>
+  <link rel="stylesheet" href="./toyota-registration.css">
 </head>
 
-<body class="parent">
+<body class="parent" onload="document.register.userid.focus();">
 
     <div class="mid">
-        <form action="">
-            user id:      <input type="text" name="" id="textbox"><br><br>
-            password:     <input type="text" name="" id="textbox"><br><br>
-            Name:         <input type="text" name="" id="textbox"><br><br>
-            address:      <input type="text" name="" id="textbox"><br><br>
-            country:    <input type="text" name="" id="textbox"><br><br>
-            zip code:   <input type="text" name="" id="textbox"><br><br>
-            email:      <input type="text" name="" id="textbox"><br><br>
-            gender:      Male<input type="radio" name="" id="radio">Female<input type="radio" name="" id="radio"><br><br>
-            language:   <input type="radio" name="" id="radio"><input type="radio" name="" id="radio"><br><br>
-            about:      <input type="text" name="" id="field"><br><br>
-                         <button type="submit"></button>
+        <!-- <form name="register" on-click="validate" onsubmit="alert('Would you like to submit?');return false" -->
+
+        <form action="#" name="register" onSubmit="return formValidation();">
+
+            <div><label for="">user id:</label><input type="text" name="userid" id="userid" class="textbox" size="12">
+            </div><br>
+            <div><label for="">password:</label><input type="text" name="" id="" class="textbox"></div><br>
+            <div><label for="">Name:</label><input type="text" name="" id="" class="textbox"></div><br>
+            <div><label for="">address:</label><input type="text" name="" id="" class="textbox"></div> <br>
+            <div><label for="">country:</label>
+                <select name="" id="country" class="textbox">
+                    <option value="">Please select your country</option>
+                    <option value="">uganda</option>
+                    <option value="">kenya</option>
+                    <option value="">rwanda</option>
+                    <option value="">tanzania</option>
+                    <option value="">Ethiopia</option>
+                    <option value="">south africa</option>
+                    <option value="">nigeria</option>
+                    <option value="">togo</option>
+                </select></div><br>
+            <div><label for="">zip code:</label><input type="text" name="" id="" class="textbox"></div><br>
+            <div><label for="">email: </label><input type="text" name="" id="textbox"></div><br>
+            <div><label for="">gender:</label>
+                Male<input type="radio" name="" id="radio">
+                Female<input type="radio" name="" id="radio"></div><br>
+            <div><label for="">language: </label>
+                English<input type="radio" name="" id="radio">
+                Non-English<input type="radio" name="" id="radio"></div><br>
+            <div><label for="">about: </label><input type="text" name="" id="field"></div><br>
+            <label for=""><button type="submit" value="submit"><b>Submit</b></button>
         </form>
     </div>
+
+    <script src="toyota-registration-form.js"></script>
 
 </body>
 
